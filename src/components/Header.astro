@@ -1,5 +1,50 @@
 ---
+import Button from "./Button.astro";
 ---
-<div>
-Header - tilføj navigation mm.
+
+<div x-data="{ showmenu: false }" class="fixed lg:fixed w-full text-turquoise-800 z-50 bg-gradient-to-b from-black/80 to-white/0 p-xs">
+  <div id="navbar" class="flex flex-row justify-between items-center p-xs">
+    <!-- Logo -->
+    <div id="logo" class="flex items-center text-white font-bold">
+      <a href="#index"><img src="/logo.svg" alt="ØNSK logo" class="w-lg" /></a>
+    </div>
+    <!-- Desktop menu -->
+    <nav id="desktopmenu" class="hidden lg:block">
+      <div class="flex flex-row gap-m items-center">
+        <ul class="flex flex-row gap-m">
+          <li class="text-white hover:text-orange-500 transition duration-200"><a href="#">Kaffe</a></li>
+          <li class="text-white hover:text-orange-500 transition duration-200"><a href="#">Kapsler</a></li>
+          <li class="text-white hover:text-orange-500 transition duration-200"><a href="#">Udstyr</a></li>
+          <li class="text-white hover:text-orange-500 transition duration-200"><a href="#">Abonnementer</a></li>
+          <li class="text-white hover:text-orange-500 transition duration-200"><a href="#">Om os</a></li>
+        </ul>
+        <div>
+          <Button text="Tilmeld rejse" bgColor="bg-orange-500" textColor="text-white" width="150px" height="50px" />
+        </div>
+      </div>
+    </nav>
+
+    <!-- Burger Menu Button -->
+    <button id="burgermenu" class="lg:hidden" x-on:click="showmenu = ! showmenu">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-m text-orange-500">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div class="bg-gradient-radial from-black/100 via-transparent to-transparent">
+    <nav id="mobilmenu" class="flex flex-col pt-xs" x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false">
+      <ul class="flex flex-col items-end pr-xs">
+        <li class="text-white hover:text-orange-500 transition duration-200"><a href="#">Kaffe</a></li>
+        <li class="text-white hover:text-orange-500 transition duration-200"><a href="#">Kapsler</a></li>
+        <li class="text-white hover:text-orange-500 transition duration-200"><a href="#">Udstyr</a></li>
+        <li class="text-white hover:text-orange-500 transition duration-200"><a href="#">Abonnementer</a></li>
+        <li class="text-white hover:text-orange-500 transition duration-200"><a href="#">Om os</a></li>
+      </ul>
+    </nav>
+    <div class="flex justify-end py-m pr-xs">
+      <Button text="Tilmeld rejse" bgColor="bg-orange-500" textColor="text-white" width="150px" height="50px" />
+    </div>
+  </div>
 </div>

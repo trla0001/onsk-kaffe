@@ -1,5 +1,18 @@
 ---
+const { variant = "primary", size = "large" } = Astro.props;
+
+const variantClasses = {
+  primary: "",
+  secondary: "",
+};
+
+const sizeClasses = {
+  large: "",
+  medium: "",
+  small: "",
+};
 ---
+
 <div>
-    <button class="border-2 border-black"><slot /></button>
+  <button class:list={[variantClasses[variant], sizeClasses[size]]}><slot /></button>
 </div>
