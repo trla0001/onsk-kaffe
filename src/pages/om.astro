@@ -22,13 +22,21 @@ import kontakt1 from "../assets/images/om_os/kontakt1.webp";
 <MainLayout title="Titel">
   <Hero_undersider overskrift="Vores team" illustration={om_os_hero} />
 
-  <article class="px-20">
-    <h1 class="text-mobile_l font-bold text-brown-800 pb-20">Ønsk’s historie</h1>
-    <h2 class="text-mobile-xs font-semibold">Fra kaffeelskere til en bedre fremtid</h2>
+  <article class="px-20 bg-bordeaux-700">
+    <h1 class="text-mobile_l font-bold text-brown-800 py-20">Ønsk’s historie</h1>
+    <h2 class="text-mobile-xs font-semibold pb-40">Fra kaffeelskere til en bedre fremtid</h2>
     <p class="text-mobile-base font-regular">
       ØNSK blev grundlagt i 2017 af makkerparret Rasmus og Andreas, med et ønske om at skabe en anderledes kaffevirksomhed. Deres vision var at skabe en virksomhed, der ikke kun handlede om kvalitets kaffe, men også om at gøre en positiv forskel. For
       kaffebønderne, for kunderne og for planeten.
     </p>
+    <Image src={historie1} alt="photo af Rasmus og Andreas" class="pr-80 pt-40" />
+    <Image src={historie2} alt="photo af coffe bean" class="" />
+
+    <div class="relative">
+      <Image src={historie1} alt="photo af Rasmus og Andreas" class="pr-80 pt-40" />
+      <Image src={historie2} alt="photo af a coffee bean" class="absolute bottom-4 right-4 w-[40%] z-10 borderRadius-lg" />
+    </div>
+
     <Button>Klik!</Button>
     <p class="text-mobile-base">Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
     <!-- <Image src={hero_pattern.jpg} alt="" /> -->
