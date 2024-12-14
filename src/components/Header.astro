@@ -7,7 +7,14 @@ import user from "../assets/images/icons/user.svg";
 import search from "../assets/images/icons/search.svg";
 ---
 
-<div x-data="{ showmenu: false }" class="fixed lg:fixed flex justify-center w-full text-turquoise-800 z-50 bg-gradient-to-b from-black/80 to-white/0 py-12 px-88">
+<div class="flex justify-end pt-20 pb-40 px-88">
+  <ul class="flex flex-row gap-40">
+    <li class="text-white hover:text-orange-500 transition duration-200"><Link href="#">Privat</Link></li>
+    <li class="text-white hover:text-orange-500 transition duration-200"><Link href="#">Erhverv</Link></li>
+  </ul>
+</div>
+
+<div x-data="{ showmenu: false }" class="fixed lg:fixed flex flex-col w-full text-turquoise-800 z-50 bg-gradient-to-b from-black/80 to-white/0 py-12 px-88">
   <div id="navbar" class="flex flex-row gap-68 items-center p-xs">
     <!-- Logo -->
     <div id="logo" class="flex items-center text-white font-bold">
