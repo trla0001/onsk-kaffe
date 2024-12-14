@@ -49,7 +49,7 @@ export default {
     /* Tilføj fonte herunder - husk også at tilføje webfonte i head-sektionen i MainLayout  */
     fontFamily: {
       body: ["Open Sans", "serif"],
-      display: [".New York", "serif"] /* eksempel på ekstra font */,
+      display: ["Playfair Display", "serif"] /* eksempel på ekstra font */,
     },
 
     /* Tilføj dit typografiske hierarki herunder */
