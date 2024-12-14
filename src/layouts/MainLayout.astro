@@ -19,8 +19,16 @@ const { title } = Astro.props;
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wdth@0,75..100;1,75..100&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet" />
     <title>{Astro.props.title}</title>
+
+    <!-- SEO -->
+    <meta name="description" content={Astro.props.description} />
+    <meta name="og:locale" content="da_DK" />
+    <meta name="og:type" content="website" />
+    <meta name="og:title" content={Astro.props.ogtitle} />
+    <meta name="og:description" content={Astro.props.ogdescription} />
+    <!-- SEO slut -->
   </head>
-  <body>
+  <body class="bg-brown-50">
     <header>
       <Header />
     </header>
