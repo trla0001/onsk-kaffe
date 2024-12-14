@@ -7,30 +7,31 @@ import user from "../assets/images/icons/user.svg";
 import search from "../assets/images/icons/search.svg";
 ---
 
-<div class="flex justify-end pt-20 pb-40 px-88">
+<div class="flex justify-end pt-12 pb-12 lg:pb-40 px-28 md:px-88">
   <ul class="flex flex-row gap-40">
     <li class="text-white hover:text-orange-500 transition duration-200"><Link href="#">Privat</Link></li>
     <li class="text-white hover:text-orange-500 transition duration-200"><Link href="#">Erhverv</Link></li>
   </ul>
 </div>
 
-<div x-data="{ showmenu: false }" class="fixed lg:fixed flex flex-col w-full text-turquoise-800 z-50 bg-gradient-to-b from-black/80 to-white/0 py-12 px-88">
-  <div id="navbar" class="flex flex-row gap-68 items-center p-xs">
+<div x-data="{ showmenu: false }" class="fixed lg:fixed flex flex-col w-full z-50 py-12 px-28 md:px-88">
+  <div id="navbar" class="flex flex-row md:gap-68 justify-between items-center">
     <!-- Logo -->
-    <div id="logo" class="flex items-center text-white font-bold">
-      <a href="#index"><Image src={logo} alt="ØNSK logo" /></a>
+    <div id="logo" class="flex items-center">
+      <a href="#index"><Image src={logo} alt="ØNSK logo" class="w-[110px] lg:w-full" /></a>
     </div>
+
     <!-- Desktop menu -->
     <nav id="desktopmenu" class="hidden lg:block w-full">
       <div class="flex flex-row items-center justify-between">
         <ul class="flex flex-row gap-36">
-          <li class="text-white hover:text-orange-500 transition duration-200"><Link href="#">Kaffe</Link></li>
-          <li class="text-white hover:text-orange-500 transition duration-200"><Link href="#">Kapsler</Link></li>
-          <li class="text-white hover:text-orange-500 transition duration-200"><Link href="#">Udstyr</Link></li>
-          <li class="text-white hover:text-orange-500 transition duration-200"><Link href="#">Abonnementer</Link></li>
-          <li class="text-white hover:text-orange-500 transition duration-200"><Link href="#">Om os</Link></li>
+          <li class="transition duration-200"><Link href="#">Kaffe</Link></li>
+          <li class="transition duration-200"><Link href="#">Kapsler</Link></li>
+          <li class="transition duration-200"><Link href="#">Udstyr</Link></li>
+          <li class="transition duration-200"><Link href="#">Abonnementer</Link></li>
+          <li class="transition duration-200"><Link href="#">Om os</Link></li>
         </ul>
-        <div class="flex gap-32">
+        <div class="flex gap-8">
           <Image src={shopping} alt="Shoppe ikon" />
           <Image src={user} alt="Bruger ikon" />
           <Image src={search} alt="Søge ikon" />
@@ -39,22 +40,27 @@ import search from "../assets/images/icons/search.svg";
     </nav>
 
     <!-- Burger Menu Button -->
-    <button id="burgermenu" class="lg:hidden" x-on:click="showmenu = ! showmenu">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-m text-orange-500">
+    <button id="burgermenu" class="flex flex-row items-center gap-16 lg:hidden" x-on:click="showmenu = ! showmenu">
+      <div class="flex gap-8">
+        <Image src={shopping} alt="Shoppe ikon" />
+        <Image src={user} alt="Bruger ikon" />
+        <Image src={search} alt="Søge ikon" />
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-40 text-bordeaux-700">
         <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
       </svg>
     </button>
   </div>
 
   <!-- Mobile Menu -->
-  <div class="bg-gradient-radial from-black/100 via-transparent to-transparent">
-    <nav id="mobilmenu" class="flex flex-col pt-xs" x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false">
-      <ul class="flex flex-col items-end pr-xs">
-        <li class="text-white hover:text-orange-500 transition duration-200"><Link href="#">Kaffe</Link></li>
-        <li class="text-white hover:text-orange-500 transition duration-200"><Link href="#">Kapsler</Link></li>
-        <li class="text-white hover:text-orange-500 transition duration-200"><Link href="#">Udstyr</Link></li>
-        <li class="text-white hover:text-orange-500 transition duration-200"><Link href="#">Abonnementer</Link></li>
-        <li class="text-white hover:text-orange-500 transition duration-200"><Link href="#">Om os</Link></li>
+  <div class="">
+    <nav id="mobilmenu" class="flex flex-col" x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false">
+      <ul class="flex flex-col items-end gap-32 bg-brown-100 rounded-lg px-20 py-40">
+        <li class="transition duration-200"><Link href="#">Kaffe</Link></li>
+        <li class="transition duration-200"><Link href="#">Kapsler</Link></li>
+        <li class="transition duration-200"><Link href="#">Udstyr</Link></li>
+        <li class="transition duration-200"><Link href="#">Abonnementer</Link></li>
+        <li class="transition duration-200"><Link href="#">Om os</Link></li>
       </ul>
     </nav>
   </div>
