@@ -1,9 +1,6 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import CardTrustpilot from "../components/CardTrustpilot.astro";
-import CardTips from "../components/CardTips.astro";
-import CardProduct from "../components/CardProduct.astro";
-import Link from "../components/Link.astro";
+
 import { Image } from "astro:assets";
 import fragt from "../assets/images/icons/fragt.svg";
 import binding from "../assets/images/icons/binding.svg";
@@ -36,18 +33,5 @@ import binding from "../assets/images/icons/binding.svg";
       <p>Når du åbner en pakke ØNSK kaffe, træder du ind i en verden af smagsoplevelser.</p>
       <p>Fra den lette, frugtige friskhed, hvor du kan finde subtile noter af citrus og bær, til de mørkere, dybere nuancer med hints af chokolade, karamel og krydderier.</p>
     </article>
-  </section>
-
-  <section id="tester">
-    <CardTrustpilot image="/trustpilot/image-1.png" navn="Mikkel" text="Hurtig leveringstid samt mulighed for at nyde min kaffe med god samvittighed og vide at jeg støtter en god sag." />
-    <CardTrustpilot image="/trustpilot/image-1.png" navn="Johanne" text="Ubetinget kvalitetsprodukter, som har gjort mig til en begejstret og fast kunde - og produktambassadør." />
-    <CardTrustpilot image="/trustpilot/image-1.png" navn="Rasmus" text="Det rigtige sted at handle for en kvalitetsbevidst kaffedrikker." />
-    <CardTrustpilot image="/trustpilot/image-1.png" navn="Kim" text="ØNSK sørger for at flere penge går til dem, der producerer kaffen. Det er fantastisk. " />
-    <CardTrustpilot image="/trustpilot/image-1.png" navn="Lia" text="Jeg har nu flere gange bestilt kaffe fra Ønsk, som altid er super lækkert og friskt." />
-    <CardTrustpilot image="/trustpilot/image-1.png" navn="Simon" text="Utroligt billige friskristede af høj kvalitet. Abonnementet virker fortrinligt." />
-
-    <CardTips image="/trustpilot/image-1.png" text="Latte art for begyndere" />
-
-    <CardProduct image="/trustpilot/image-1.png" text="Latte art for begyndere" />
   </section>
 </MainLayout>
