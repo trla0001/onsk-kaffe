@@ -1,25 +1,32 @@
 ---
-import Button from "./Button.astro";
+import Link from "./Link.astro";
+import { Image } from "astro:assets";
+import logo from "../assets/images/logo.svg";
+import shopping from "../assets/images/icons/shopping.svg";
+import user from "../assets/images/icons/user.svg";
+import search from "../assets/images/icons/search.svg";
 ---
 
-<div x-data="{ showmenu: false }" class="fixed lg:fixed w-full text-turquoise-800 z-50 bg-gradient-to-b from-black/80 to-white/0 p-xs">
-  <div id="navbar" class="flex flex-row justify-between items-center p-xs">
+<div x-data="{ showmenu: false }" class="fixed lg:fixed flex justify-center w-full text-turquoise-800 z-50 bg-gradient-to-b from-black/80 to-white/0 py-12 px-88">
+  <div id="navbar" class="flex flex-row gap-68 items-center p-xs">
     <!-- Logo -->
     <div id="logo" class="flex items-center text-white font-bold">
-      <a href="#index"><img src="/logo.svg" alt="ØNSK logo" class="w-lg" /></a>
+      <a href="#index"><Image src={logo} alt="ØNSK logo" /></a>
     </div>
     <!-- Desktop menu -->
-    <nav id="desktopmenu" class="hidden lg:block">
-      <div class="flex flex-row gap-m items-center">
-        <ul class="flex flex-row gap-m">
-          <li class="text-white hover:text-orange-500 transition duration-200"><a href="#">Kaffe</a></li>
-          <li class="text-white hover:text-orange-500 transition duration-200"><a href="#">Kapsler</a></li>
-          <li class="text-white hover:text-orange-500 transition duration-200"><a href="#">Udstyr</a></li>
-          <li class="text-white hover:text-orange-500 transition duration-200"><a href="#">Abonnementer</a></li>
-          <li class="text-white hover:text-orange-500 transition duration-200"><a href="#">Om os</a></li>
+    <nav id="desktopmenu" class="hidden lg:block w-full">
+      <div class="flex flex-row items-center justify-between">
+        <ul class="flex flex-row gap-36">
+          <li class="text-white hover:text-orange-500 transition duration-200"><Link href="#">Kaffe</Link></li>
+          <li class="text-white hover:text-orange-500 transition duration-200"><Link href="#">Kapsler</Link></li>
+          <li class="text-white hover:text-orange-500 transition duration-200"><Link href="#">Udstyr</Link></li>
+          <li class="text-white hover:text-orange-500 transition duration-200"><Link href="#">Abonnementer</Link></li>
+          <li class="text-white hover:text-orange-500 transition duration-200"><Link href="#">Om os</Link></li>
         </ul>
-        <div>
-          <Button text="Tilmeld rejse" bgColor="bg-orange-500" textColor="text-white" width="150px" height="50px" />
+        <div class="flex gap-32">
+          <Image src={shopping} alt="Shoppe ikon" />
+          <Image src={user} alt="Bruger ikon" />
+          <Image src={search} alt="Søge ikon" />
         </div>
       </div>
     </nav>
@@ -36,15 +43,12 @@ import Button from "./Button.astro";
   <div class="bg-gradient-radial from-black/100 via-transparent to-transparent">
     <nav id="mobilmenu" class="flex flex-col pt-xs" x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false">
       <ul class="flex flex-col items-end pr-xs">
-        <li class="text-white hover:text-orange-500 transition duration-200"><a href="#">Kaffe</a></li>
-        <li class="text-white hover:text-orange-500 transition duration-200"><a href="#">Kapsler</a></li>
-        <li class="text-white hover:text-orange-500 transition duration-200"><a href="#">Udstyr</a></li>
-        <li class="text-white hover:text-orange-500 transition duration-200"><a href="#">Abonnementer</a></li>
-        <li class="text-white hover:text-orange-500 transition duration-200"><a href="#">Om os</a></li>
+        <li class="text-white hover:text-orange-500 transition duration-200"><Link href="#">Kaffe</Link></li>
+        <li class="text-white hover:text-orange-500 transition duration-200"><Link href="#">Kapsler</Link></li>
+        <li class="text-white hover:text-orange-500 transition duration-200"><Link href="#">Udstyr</Link></li>
+        <li class="text-white hover:text-orange-500 transition duration-200"><Link href="#">Abonnementer</Link></li>
+        <li class="text-white hover:text-orange-500 transition duration-200"><Link href="#">Om os</Link></li>
       </ul>
     </nav>
-    <div class="flex justify-end py-m pr-xs">
-      <Button text="Tilmeld rejse" bgColor="bg-orange-500" textColor="text-white" width="150px" height="50px" />
-    </div>
   </div>
 </div>
