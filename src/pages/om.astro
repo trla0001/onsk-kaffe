@@ -10,6 +10,9 @@ import pattern from "../assets/images/om_os/pattern.svg";
 import om_os_hero from "../assets/images/om_os/om_os_hero.svg";
 import historie1 from "../assets/images/om_os/historie1.webp";
 import bean from "../assets/images/om_os/bean.webp";
+import ill1 from "../assets/images/om_os/ill1.svg";
+import ill2 from "../assets/images/om_os/ill2.svg";
+import ill3 from "../assets/images/om_os/ill3.svg";
 import historie3 from "../assets/images/om_os/historie3.webp";
 import beredygtighed1 from "../assets/images/om_os/beredygtighed1.webp";
 import beredygtighed2 from "../assets/images/om_os/beredygtighed2.webp";
@@ -44,7 +47,7 @@ import kontakt1 from "../assets/images/om_os/kontakt1.webp";
 
       <div class="hidden md:grid grid-cols-2 gap-8">
         <div class="relative w-[450px] h-[550px]">
-          <Image src={historie1} alt="photo af Rasmus og Andreas" class="rounded-lg mr-80 mt-40 w-[90%]" />
+          <Image src={historie1} alt="photo af Rasmus og Andreas" class="rounded-lg mr-80 mt-40 w-[80%]" />
           <Image src={bean} alt="photo af a coffee bean" class="rounded-lg absolute w-[40%] z-10 bottom-4 right-4" />
         </div>
         <div>
@@ -54,15 +57,124 @@ import kontakt1 from "../assets/images/om_os/kontakt1.webp";
             ØNSK blev grundlagt i 2017 af makkerparret Rasmus og Andreas, med et ønske om at skabe en anderledes kaffevirksomhed. Deres vision var at skabe en virksomhed, der ikke kun handlede om kvalitets kaffe, men også om at gøre en positiv
             forskel. For kaffebønderne, for kunderne og for planeten.
           </p>
-          <p class="text-mobile-base font-regular pt-32 pb-64">
+          <p class="text-mobile-base font-regular pt-176 pb-64 pl-80">
             Som et <span class="font-semibold">certificeret B Corp</span> har vi officielt erklæret, at vores højeste formål som virksomhed er at bidrage til en bedre verden.
           </p>
         </div>
       </div>
-
-      <Button>Klik!</Button>
-      <p class="text-mobile-base">Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
-      <!-- <Image src={hero_pattern.jpg} alt="" /> -->
     </article>
+
+    <div class="md:hidden">
+      <div class="grid grid-cols-2 gap-64">
+        <div>
+          <Image src={ill1} alt="" />
+        </div>
+        <div class="pt-80">
+          <h2 class="text-mobile-xs font-semibold pb-40">God kaffe med god samvittighed.</h2>
+        </div>
+      </div>
+      <p class="text-mobile-base font-regular pb-20 px-20 md:px-144">
+        Når du vælger kaffe fra ØNSK får du ikke kun kvalitetskaffe, der lever op til kvalitetsbetegnelsen specialkaffe – du vælger også at betale din kaffebonde en ordentlig pris. Samtidig får du en kaffe, der er produceret med respekt for både
+        gårdens omkringliggende natur og miljø. Det, synes vi, er definitionen af god kaffe.
+      </p>
+      <Image src={historie3} alt="" class="rounded-lg ml-40 mt-40 w-[80%]" />
+    </div>
+
+    <div class="hidden md:grid grid-cols-2 gap-64 px-144 pt-112">
+      <div>
+        <h2 class="text-xs font-semibold pb-40">God kaffe med god samvittighed.</h2>
+        <p class="text-base font-regular pb-20">
+          Når du vælger kaffe fra ØNSK får du ikke kun kvalitetskaffe, der lever op til kvalitetsbetegnelsen specialkaffe – du vælger også at betale din kaffebonde en ordentlig pris. Samtidig får du en kaffe, der er produceret med respekt for både
+          gårdens omkringliggende natur og miljø. Det, synes vi, er definitionen af god kaffe.
+        </p>
+      </div>
+      <div>
+        <Image src={historie3} alt="" class="rounded-lg ml-64" />
+      </div>
+
+      <div class="md:hidden">
+        <div class="grid grid-cols-2 gap-64">
+          <div>
+            <Image src={ill1} alt="" />
+          </div>
+          <div class="pt-80">
+            <h2 class="text-mobile-xs font-semibold pb-40">God kaffe med god samvittighed.</h2>
+          </div>
+        </div>
+        <p class="text-mobile-base font-regular pb-20 px-20 md:px-144">
+          Når du vælger kaffe fra ØNSK får du ikke kun kvalitetskaffe, der lever op til kvalitetsbetegnelsen specialkaffe – du vælger også at betale din kaffebonde en ordentlig pris. Samtidig får du en kaffe, der er produceret med respekt for både
+          gårdens omkringliggende natur og miljø. Det, synes vi, er definitionen af god kaffe.
+        </p>
+        <Image src={historie3} alt="" class="rounded-lg ml-40 mt-40 w-[80%]" />
+      </div>
+    </div>
+
+    <div class="hidden md:block h-144">
+      <Image src={ill1} alt="" />
+    </div>
+    <section class="hidden md:grid grid-cols-2 bg-brown-100 pt-144 gap-144">
+      <div class="pl-144">
+        <h1 class="text-l font-bold text-brown-800 py-20">Bæredygtighed</h1>
+        <h2 class="text-xs font-semibold pb-40">Vores løfte om en bedre kaffefremtid</h2>
+        <p class="text-base font-regular">
+          Kaffebranchen har ofte manglet gennemsigtighed, og for mange er det svært at finde ud af, hvor deres kaffe kommer fra, og under hvilke forhold den er produceret. ØNSK ønsker at gøre en forskel ved at være en transparent kaffevirksomhed, der
+          handler direkte med kaffebønderne og investerer tilbage i deres produktion. Derfor udgiver vi hvert år en sustainability report, der giver et åbent og ærligt billede af vores arbejde og vores bæredygtighedsmål.
+        </p>
+        <p class="text-base font-regular pt-40 pb-64">
+          I denne rapport kan du læse mere om, hvordan <span class="font-semibold">vi kæmper mod fattigdom og ulighed</span> ved at sikre, at kaffebønderne får en retfærdig pris for deres arbejde. Vi opnår dette ved at eliminere mellemled, hvilket skaber
+          længerevarende relationer, forbedrer levevilkår og giver os mulighed for at investere i bæredygtige landbrugspraksisser.
+        </p>
+
+        <a href=""><p class="text-base italic underline font-regular text-bordeaux-700">Læs vores seneste Impact Report</p></a>
+      </div>
+      <div class="flex justify-end">
+        <div class="flex flex-col items-end">
+          <Image src={beredygtighed1} alt="" class="rounded-lg mt-40 mr-144" />
+          <Image src={ill2} alt="" class="mt-8" />
+        </div>
+      </div>
+    </section>
+    <div class="hidden md:grid grid-cols-2 bg-brown-100 px-144 gap-144 pb-96">
+      <div>
+        <Image src={beredygtighed2} alt="" class="rounded-lg" />
+      </div>
+      <div>
+        <p class="text-base font-regular pt-112 pb-64">
+          <span class="font-semibold">Vores kaffe dyrkes økologisk</span> og gennem skovlandbrug, kan det gavne både biodiversiteten og miljøet. Vi arbejder for at støtte disse metoder og hjælpe bønderne med at forbedre jordens sundhed og lagre mere CO2.
+        </p>
+      </div>
+    </div>
+    <!-- mobil -->
+    <div class="block md:hidden bg-brown-100 px-20 mt-40">
+      <h1 class="text-mobile_l font-bold text-brown-800 py-20">Bæredygtighed</h1>
+      <h2 class="text-mobile-xs font-semibold pb-20">Vores løfte om en bedre kaffefremtid</h2>
+      <p class="text-mobile-base font-regular pt-20">
+        Kaffebranchen har ofte manglet gennemsigtighed, og for mange er det svært at finde ud af, hvor deres kaffe kommer fra, og under hvilke forhold den er produceret. ØNSK ønsker at gøre en forskel ved at være en transparent kaffevirksomhed, der
+        handler direkte med kaffebønderne og investerer tilbage i deres produktion. Derfor udgiver vi hvert år en sustainability report, der giver et åbent og ærligt billede af vores arbejde og vores bæredygtighedsmål.
+      </p>
+      <Image src={beredygtighed1} alt="" class="rounded-lg my-40 mr-40 w-[80%]" />
+      <p class="text-mobile-base font-regular pb-32">
+        I denne rapport kan du læse mere om, hvordan <span class="font-semibold">vi kæmper mod fattigdom og ulighed</span> ved at sikre, at kaffebønderne får en retfærdig pris for deres arbejde. Vi opnår dette ved at eliminere mellemled, hvilket skaber
+        længerevarende relationer, forbedrer levevilkår og giver os mulighed for at investere i bæredygtige landbrugspraksisser.
+      </p>
+
+      <a href=""><p class="text-mobile-base italic underline font-regular text-bordeaux-700">Læs vores seneste Impact Report</p></a>
+
+      <Image src={beredygtighed2} alt="" class="rounded-lg my-40 mr-40 w-[80%]" />
+      <p class="text-mobile-base font-regular pb-64">
+        <span class="font-semibold">Vores kaffe dyrkes økologisk</span> og gennem skovlandbrug, kan det gavne både biodiversiteten og miljøet. Vi arbejder for at støtte disse metoder og hjælpe bønderne med at forbedre jordens sundhed og lagre mere CO2.
+      </p>
+    </div>
+    <div class="block md:hidden">
+      <div class="flex justify-end">
+        <Image src={ill2} alt="" class="w-[40%]" />
+      </div>
+    </div>
+    <!-- kontakt -->
+    <section></section>
   </div>
+
+  <Button>Klik!</Button>
+  <p class="text-mobile-base">Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
+  <!-- <Image src={hero_pattern.jpg} alt="" /> -->
 </MainLayout>
