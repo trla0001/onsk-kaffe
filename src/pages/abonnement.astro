@@ -14,7 +14,7 @@ import branchsmall from "../assets/images/branch-small.svg";
 
 <MainLayout title="Titel">
   <section id="hero"></section>
-  <section id="abonnement" class="my-96 mx-32 grid justify-items-center">
+  <section id="abonnement" class="mt-68 mb-288 mx-32 grid justify-items-center">
     <h2 class="font-display font-bold text-mobile_m md:text-m text-brown-800 pb-80">Find dit abonnement</h2>
     <div class="grid grid-cols-3 gap-112">
       <CardAbonnement image={alturas} name="Standard abonnement" variant="Fast kaffevariant" prize="85,50 kr. - 238,50 kr." badgerabat="true" />
@@ -23,9 +23,8 @@ import branchsmall from "../assets/images/branch-small.svg";
     </div>
   </section>
 
-  <div class="absolute z-10 grid place-items-end w-full"><Image src={branchbig} alt="" class="-scale-x-100" /></div>
-
-  <section id="om" class="bg-brown-100 grid justify-items-center py-96">
+  <section id="om" class="relative bg-brown-100 grid justify-items-center items-center py-96">
+    <div class="absolute z-10 grid place-items-end w-full -top-176"><Image src={branchbig} alt="" class="-scale-x-100" /></div>
     <div class="absolute z-10 grid place-items-start w-full"><Image src={branchsmall} alt="" class="-scale-x-100" /></div>
     <article class="max-w-[639px] mx-auto pb-80">
       <h2 class="font-display font-bold text-mobile_m md:text-m text-brown-800 pb-40">Om et ØNSK abonnement</h2>
