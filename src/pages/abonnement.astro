@@ -8,11 +8,13 @@ import binding from "../assets/images/icons/binding.svg";
 import month from "../assets/images/produkter/month.png";
 import alturas from "../assets/images/produkter/alturas.webp";
 import gave from "../assets/images/produkter/gave.webp";
+import branchbig from "../assets/images/branch-big.svg";
+import branchsmall from "../assets/images/branch-small.svg";
 ---
 
 <MainLayout title="Titel">
   <section id="hero"></section>
-  <section id="abonnement" class="py-68 px-32 grid justify-items-center">
+  <section id="abonnement" class="my-96 mx-32 grid justify-items-center">
     <h2 class="font-display font-bold text-mobile_m md:text-m text-brown-800 pb-80">Find dit abonnement</h2>
     <div class="grid grid-cols-3 gap-112">
       <CardAbonnement image={alturas} name="Standard abonnement" variant="Fast kaffevariant" prize="85,50 kr. - 238,50 kr." badgerabat="true" />
@@ -20,7 +22,11 @@ import gave from "../assets/images/produkter/gave.webp";
       <CardAbonnement image={gave} name="Gave abonnement" variant="Fast kaffevariant" prize="400 kr. - 4.140 kr. " />
     </div>
   </section>
-  <section id="om" class="bg-brown-100 grid justify-items-center py-68">
+
+  <div class="absolute z-10 grid place-items-end w-full"><Image src={branchbig} alt="" class="-scale-x-100" /></div>
+
+  <section id="om" class="bg-brown-100 grid justify-items-center py-96">
+    <div class="absolute z-10 grid place-items-start w-full"><Image src={branchsmall} alt="" class="-scale-x-100" /></div>
     <article class="max-w-[639px] mx-auto pb-80">
       <h2 class="font-display font-bold text-mobile_m md:text-m text-brown-800 pb-40">Om et ØNSK abonnement</h2>
       <p class="font-body font-regular text-mobile_base md:text-base text-brown-800 pb-16">Med et abonnement på ØNSK kaffe får du hver måned leveret friskristede, økologiske kaffebønner eller kapsler direkte til din dør.</p>
@@ -31,6 +37,7 @@ import gave from "../assets/images/produkter/gave.webp";
       <div><Image src={fragt} alt="" /><h3 class="font-display font-bold text-mobile_xs md:text-xs text-brown-800 text-center pt-52">Gratis fragt</h3></div>
     </article>
   </section>
+
   <section id="kvali" class="grid grid-cols-12 py-68">
     <article class="col-start-2 col-span-4 row-start-1 row-span-1">
       <h2 class="font-display font-bold text-mobile_m md:text-m text-brown-800 pb-40">Kvalitet i Hver Eneste Detalje</h2>
@@ -43,6 +50,8 @@ import gave from "../assets/images/produkter/gave.webp";
       <p class="font-body font-regular text-mobile_base md:text-base text-brown-800">Fra den lette, frugtige friskhed, hvor du kan finde subtile noter af citrus og bær, til de mørkere, dybere nuancer med hints af chokolade, karamel og krydderier.</p>
     </article>
   </section>
+  <div class="absolute z-10"><Image src={branchbig} alt="" class="" /></div>
+
   <section>
     <article>
       <h2>Hvor meget kaffe passer til mig?</h2>
@@ -52,4 +61,5 @@ import gave from "../assets/images/produkter/gave.webp";
     <article></article>
     <article></article>
   </section>
+  <div class="absolute z-10 grid self-end"><Image src={branchsmall} alt="" class="-scale-x-100" /></div>
 </MainLayout>
