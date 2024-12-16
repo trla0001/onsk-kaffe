@@ -1,5 +1,5 @@
 ---
-const { name = "", image = "", variant = "", prize = "" } = Astro.props;
+const { name = "", image = "", variant = "", prize = "", badgerabat = "false" } = Astro.props;
 
 import { Image } from "astro:assets";
 import Button from "../components/Button.astro";
@@ -9,6 +9,13 @@ import Button from "../components/Button.astro";
   <a href="#">
     <div class="z-10 pb-52"><Image src={image} alt="" class="w-[214px] group-hover:slide-top" /></div>
     <article class="w-full pb-24">
+      {
+        badgerabat == "true" && (
+          <div class="absolute top-40 bg-bordeaux-700 text-brown-50 p-16 rounded-xs font-body font-regular text-mobile_base md:text-base_xs">
+            <span>10%</span>
+          </div>
+        )
+      }
       <h3 class="font-display font-semibold text-mobile_s md:text-xxs text-brown-800 pb-8">{name}</h3>
       <p class="font-body font-regular text-mobile_base md:text-base_xs text-brown-800 pb-0">{variant}</p>
       <p class="font-display font-semibold text-mobile_s md:text-xxs text-bordeaux-700 place-self-end">{prize}</p>
