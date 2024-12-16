@@ -3,6 +3,9 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
 import Hero_undersider from "../components/Hero_undersider.astro";
+import CardTeam from "../components/CardTeam.astro";
+import Carousel from "../components/Carousel.astro";
+import CarouselIkon from "../components/CarouselIkon.astro";
 
 import { Image } from "astro:assets";
 // import hero_pattern from "../assets/images/hero_pattern.jpg";
@@ -18,6 +21,15 @@ import historie3 from "../assets/images/om_os/historie3.webp";
 import beredygtighed1 from "../assets/images/om_os/beredygtighed1.webp";
 import beredygtighed2 from "../assets/images/om_os/beredygtighed2.webp";
 import kontakt1 from "../assets/images/om_os/kontakt1.webp";
+import ikon_team from "../assets/images/om_os/ikon_team.svg";
+import pil_r from "../assets/images/om_os/pil_r.svg";
+
+import andreas from "../assets/images/om_os/andreas.webp";
+import mathias from "../assets/images/om_os/mathias.webp";
+import laurits from "../assets/images/om_os/laurits.webp";
+import stine from "../assets/images/om_os/stine.webp";
+import jamie from "../assets/images/om_os/jamie.webp";
+import noel from "../assets/images/om_os/noel.webp";
 
 // import hero_pattern from "../assets/images/hero_pattern.jpg";
 // import hero_pattern from "../assets/images/hero_pattern.jpg";
@@ -197,9 +209,27 @@ import kontakt1 from "../assets/images/om_os/kontakt1.webp";
     <div class="hidden md:flex justify-start">
       <Image src={ill3} alt="" class="w-[20%]" />
     </div>
+    <!-- Carousel -->
+    <div class="relative md:flex items-center overflow-hidden pl-20">
+      <CarouselIkon ikon={ikon_team} ikon_name="Vores team" />
+      <Carousel>
+        <CardTeam photo={andreas} name="Andreas Kirk" position="Partner & erhvervsløsningerp" phone="+45 25 94 02 10" email="andreas@onsk.dk" />
+        <CardTeam photo={mathias} name="Mathias Bunk" position="Partner, administration" phone="+45 25 94 02 10" email="mathias@onsk.dk" />
+        <CardTeam photo={laurits} name="Laurits Dates Benthien" position="Kundeservice" phone="+45 25 94 02 10" email="laurits@onsk.dk" />
+        <CardTeam photo={stine} name="Stine Busk" position="Digital koordinator" phone="+45 25 94 02 10" email="stine@onsk.dk" />
+        <CardTeam photo={jamie} name="Jamie Breidfjord" position="Produktion & risteri" phone="+45 25 94 02 10" email="jamie@onsk.dk" />
+        <CardTeam photo={noel} name="Noel Lukwaro" position="Kaffekyndig kundekonsulent" phone="+45 25 94 02 10" email="noel@onsk.dk" />
+      </Carousel>
+      <div class="hidden md:block absolute top-1/2 right-40 -translate-y-1/2">
+        <Image src={pil_r} alt="" class="w-[50px] h-auto" />
+      </div>
+    </div>
+    <!-- Buttons -->
+    <div class="border-2 border-bordeaux-700 bg-brown-100">
+      <Button variant="primary" size="large">Primary Large</Button>
+      <Button variant="secondary" size="large">Secondary Large</Button>
+      <Button variant="primary" size="small">Primary Small</Button>
+      <Button variant="secondary" size="small">Secondary Small</Button>
+    </div>
   </div>
-
-  <Button>Klik!</Button>
-  <p class="text-mobile-base">Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
-  <!-- <Image src={hero_pattern.jpg} alt="" /> -->
 </MainLayout>

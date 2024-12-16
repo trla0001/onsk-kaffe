@@ -1,0 +1,17 @@
+<article id="carousel" class="overflow-x-auto snap-x snap-mandatory bg-brown-100 px-40 rounded-l-lg">
+  <div class="flex items-center gap-lg w-max h-full py-xs">
+    <slot />
+  </div>
+</article>
+
+<style>
+  /* Hide scrollbar but keep scroll functionality */
+  #carousel::-webkit-scrollbar {
+    display: none; /* Hide scrollbar in Webkit-based browsers (Chrome, Safari) */
+  }
+
+  #carousel {
+    -ms-overflow-style: none; /* Hide scrollbar in IE10+ */
+    scrollbar-width: none; /* Hide scrollbar in Firefox */
+  }
+</style>
