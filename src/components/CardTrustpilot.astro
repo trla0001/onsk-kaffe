@@ -1,0 +1,20 @@
+---
+const { image = "", navn = "", text = "" } = Astro.props;
+import { Image } from "astro:assets";
+import star from "../assets/images/trustpilot/star.svg";
+---
+
+<article class="bg-brown-100 rounded-lg flex flex-col items-center pt-28 pb-32 px-32">
+  <img src={image} alt="" />
+  <div class="text-center pt-20 font-regular">
+    <h6 class="pb-8 font-display text-mobile_base md:text-base text-bordeaux-700">{navn}</h6>
+    <p class="pb-8 font-body italic text-mobile_base md:text-base_s text-brown-800">{text}</p>
+    <div class="flex flex-row place-self-center">
+      <Image src={star} alt="" />
+      <Image src={star} alt="" />
+      <Image src={star} alt="" />
+      <Image src={star} alt="" />
+      <Image src={star} alt="" />
+    </div>
+  </div>
+</article>

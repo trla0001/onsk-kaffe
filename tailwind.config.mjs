@@ -33,9 +33,12 @@ export default {
       24: "24px",
       28: "28px",
       32: "32px",
+      36: "36px",
       40: "40px",
-      64: "64px",
+      52: "52px",
+      68: "68px",
       80: "80px",
+      88: "88px",
       96: "96px",
       112: "112px",
       144: "144px",
@@ -49,7 +52,7 @@ export default {
     /* Tilføj fonte herunder - husk også at tilføje webfonte i head-sektionen i MainLayout  */
     fontFamily: {
       body: ["Open Sans", "serif"],
-      display: [".New York", "serif"] /* eksempel på ekstra font */,
+      display: ["Playfair Display", "serif"] /* eksempel på ekstra font */,
     },
 
     /* Tilføj dit typografiske hierarki herunder */

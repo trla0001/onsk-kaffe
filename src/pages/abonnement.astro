@@ -1,16 +1,37 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Button from "../components/Button.astro";
-import Link from "../components/Link.astro";
+
 import { Image } from "astro:assets";
-import thumbsup from "../assets/images/thumbsup.png";
+import fragt from "../assets/images/icons/fragt.svg";
+import binding from "../assets/images/icons/binding.svg";
 ---
 
 <MainLayout title="Titel">
-  <article>
-    <h1>Index overskrift</h1>
-    <Button>Klik!</Button>
-    <p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
-    <Image src={thumbsup} alt="" />
-  </article>
+  <section id="hero"></section>
+  <section id="abonnement">
+    <h2 class="font-display font-bold text-mobile_m md:text-m text-brown-800">Find dit abonnement</h2>
+  </section>
+  <section id="om" class="bg-brown-100 grid justify-items-center py-68">
+    <article class="max-w-[639px] mx-auto pb-80">
+      <h2 class="font-display font-bold text-mobile_m md:text-m text-brown-800 pb-40">Om et ØNSK abonnement</h2>
+      <p class="font-body font-regular text-mobile_base md:text-base text-brown-800 pb-16">Med et abonnement på ØNSK kaffe får du hver måned leveret friskristede, økologiske kaffebønner eller kapsler direkte til din dør.</p>
+      <p class="font-body font-regular text-mobile_base md:text-base text-brown-800">Abonnementet er fleksibelt, så du nemt kan ændre din levering eller sætte det på pause, når det passer dig. Det gør det enkelt at nyde kvalitetskaffe derhjemme uden at løbe tør.</p>
+    </article>
+    <article class="flex justify-items-center gap-144">
+      <div><Image src={binding} alt="" /><h3 class="font-display font-bold text-mobile_xs md:text-xs text-brown-800 text-center pt-52">Ingen binding</h3></div>
+      <div><Image src={fragt} alt="" /><h3 class="font-display font-bold text-mobile_xs md:text-xs text-brown-800 text-center pt-52">Gratis fragt</h3></div>
+    </article>
+  </section>
+  <section id="kvali" class="grid grid-cols-12 py-68">
+    <article class="col-start-2 col-span-4 row-start-1 row-span-1">
+      <h2 class="font-display font-bold text-mobile_m md:text-m text-brown-800 pb-40">Kvalitet i Hver Eneste Detalje</h2>
+      <p class="font-body font-regular text-mobile_base md:text-base text-brown-800 pb-16">Hver bønne, vi rister, bærer på en historie. En historie om håndværk, passion og dedikation.</p>
+      <p class="font-body font-regular text-mobile_base md:text-base text-brown-800">Som certificeret B Corp sætter vi bæredygtighed og social ansvarlighed i fokus. Fra ansvarlige dyrkningsmetoder til præcisionsristning sikrer vi, at hver bønne lever op til de højeste standarder.</p>
+    </article>
+    <article class="col-start-8 col-span-4 row-start-2 row-span-1">
+      <h2 class="font-display font-bold text-mobile_m md:text-m text-brown-800 pb-40">Smagsrejsen med ØNSK kaffe</h2>
+      <p class="font-body font-regular text-mobile_base md:text-base text-brown-800 pb-16">Når du åbner en pakke ØNSK kaffe, træder du ind i en verden af smagsoplevelser.</p>
+      <p class="font-body font-regular text-mobile_base md:text-base text-brown-800">Fra den lette, frugtige friskhed, hvor du kan finde subtile noter af citrus og bær, til de mørkere, dybere nuancer med hints af chokolade, karamel og krydderier.</p>
+    </article>
+  </section>
 </MainLayout>

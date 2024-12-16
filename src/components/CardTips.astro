@@ -1,0 +1,10 @@
+---
+const { text = "", image = "" } = Astro.props;
+---
+
+<a href="#">
+  <article class="flex flex-col items-center gap-24 hover:drop-shadow-sm">
+    <img src={image} alt="" class="rounded-lg w-[200px] md:w-[286px] object-cover" />
+    <h4 class="text-bordeaux-700 font-display text-mobile_s md:text-xs max-w-192 mx-auto text-center">{text}</h4>
+  </article>
+</a>
