@@ -3,7 +3,13 @@ import MainLayout from "../layouts/MainLayout.astro";
 import CardTrustpilot from "../components/CardTrustpilot.astro";
 import CardTips from "../components/CardTips.astro";
 import CardProduct from "../components/CardProduct.astro";
+import CardAbonnement from "../components/CardAbonnement.astro";
 import Link from "../components/Link.astro";
+
+import { Image } from "astro:assets";
+import kuska from "../assets/images/produkter/kuska.webp";
+import palto from "../assets/images/produkter/palto.webp";
+import stempelkande from "../assets/images/produkter/stempelkande.webp";
 ---
 
 <MainLayout title="Titel">
@@ -19,6 +25,10 @@ import Link from "../components/Link.astro";
     <CardTips image="/trustpilot/image-1.png" text="Latte art for begyndere" />
   </section>
   <section>
-    <CardProduct image="/trustpilot/image-1.png" text="Latte art for begyndere" />
+    <CardProduct image={kuska} name="Kuska" variant="Mellem ristet" prize="95 kr. - 265 kr." />
+    <CardProduct image={stempelkande} name="Bodum Stempelkande" variant="8 kopper" prize="420 kr." />
+    <CardProduct image={palto} name="El Palto" variant="Mørk ristet" prize="95 kr. - 265 kr." />
   </section>
+
+  <section></section>
 </MainLayout>

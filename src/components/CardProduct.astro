@@ -1,11 +1,12 @@
 ---
 const { name = "", image = "", variant = "", prize = "" } = Astro.props;
+import { Image } from "astro:assets";
 ---
 
 <section class="bg-brown-100 rounded-lg flex flex-col items-center justify-end w-[288px] h-[345px] flex-shrink-0 pb-40 px-40 hover:shadow-drop25">
   <a href="#">
     <div class="absolute bg-bordeaux-700 text-brown-50 p-16 rounded-xs font-body font-regular text-mobile_base md:text-base_xs"><span>10%</span></div>
-    <div class="z-10 pb-52"><img src={image} alt="" class="w-[214px]" /></div>
+    <div class="z-10 pb-52"><Image src={image} alt="" class="w-[214px]" /></div>
     <article class="w-full pb-24">
       <h3 class="font-display font-semibold text-mobile_s md:text-xxs text-brown-800 pb-8">{name}</h3>
       <p class="font-body font-regular text-mobile_base md:text-base_xs text-brown-800 pb-0">{variant}</p>
