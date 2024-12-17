@@ -14,6 +14,7 @@ import branchsmall from "../assets/images/branch-small.svg";
 import branchbig from "../assets/images/branch-big.svg";
 import branchsmedium from "../assets/images/branch-medium.svg";
 import ejerne from "../assets/images/ejerne.png";
+
 import kaffe1 from "../assets/images/kaffe1.png";
 import kaffe2 from "../assets/images/kaffe2.png";
 import vand_kaffe from "../assets/images/vand_kaffe.png";
@@ -32,7 +33,7 @@ import palto from "../assets/images/palto.png";
   <article>
     <!-- Hero billede -->
     <div class="flex relative">
-      <Image src={handkaffe} class="absolute top-[120px] left-0 z-10 md:w-[500px] w-[200px] h-auto" alt="Ønsk kaffepose i en hånd over bønner" />
+      <Image src={handkaffe} class="absolute top-[280px] left-0 z-10 md:w-[500px] w-[170px] h-auto" alt="Ønsk kaffepose i en hånd over bønner" />
     </div>
 
     <!-- Hero sektion -->
@@ -41,15 +42,21 @@ import palto from "../assets/images/palto.png";
         <div></div>
         <div class="md:col-span-2">
           <h1 class="md:text-2xl md:text-left text-brown-800 font-display font-bold text-center text-l pt-80">ØNSK</h1>
-          <h2 class="md:text-m md:text-left text-brown-800 font-display text-center text-s">God smag, lige til din hoveddør - hver måned</h2>
-          <Button />
+          <div class="grid md:grid-cols-2">
+            <h2 class="md:text-m md:text-left text-brown-800 font-display text-center text-s">God smag, lige til din hoveddør - hver måned</h2>
+            <!-- Knap bliver udskiftet med komponent -->
+            <div class="flex items-center justify-center">
+              <button class="bg-bordeaux-700 w-192 h-40 text-brown-50 my-40 p-8 rounded-lg">SHOP</button>
+            </div>
+            <!-- ------ -->
+          </div>
         </div>
       </div>
     </section>
 
     <!-- ILLUSTRATION -->
     <div class="flex justify-end relative">
-      <Image src={branchsmall} class="absolute md:top-[-00px] top-[-100px] left-0 z-10" alt="Lille kaffe gren" />
+      <Image src={branchsmall} class="absolute md:top-[0px] md:h-[300px] md:left-[1140px] h-[130px] top-[-50px] left-[230px] z-10" alt="Lille kaffe gren" />
     </div>
 
     <div class="flex relative">
@@ -80,15 +87,15 @@ import palto from "../assets/images/palto.png";
 
       <div class="block md:hidden pt-80 justify-items-center overflow-hidden">
         <Caruosel>
-          <CardProduct image={} name="Kuska" variant="Mellem ristet" prize="95 kr. - 265 kr." />
-          <CardProduct image={} name="Bodum Stempelkande" variant="8 kopper" prize="420 kr." />
-          <CardProduct image={} name="El Palto" variant="Mørk ristet" prize="95 kr. - 265 kr." />
+          <!-- <CardProduct image={kuska} name="Kuska" variant="Mellem ristet" prize="95 kr. - 265 kr." />
+          <CardProduct image={stempelkande} name="Bodum Stempelkande" variant="8 kopper" prize="420 kr." />
+          <CardProduct image={palto} name="El Palto" variant="Mørk ristet" prize="95 kr. - 265 kr." /> -->
         </Caruosel>
       </div>
       <div class="hidden md:block md:grid md:grid-cols-3 pt-80 justify-items-center overflow-hidden pb-20">
-        <CardProduct image={} name="Kuska" variant="Mellem ristet" prize="95 kr. - 265 kr." />
-        <CardProduct image={} name="Bodum Stempelkande" variant="8 kopper" prize="420 kr." />
-        <CardProduct image={} name="El Palto" variant="Mørk ristet" prize="95 kr. - 265 kr." />
+        <!-- <CardProduct image={kuska} name="Kuska" variant="Mellem ristet" prize="95 kr. - 265 kr." />
+        <CardProduct image={stempelkande} name="Bodum Stempelkande" variant="8 kopper" prize="420 kr." />
+        <CardProduct image={palto} name="El Palto" variant="Mørk ristet" prize="95 kr. - 265 kr." /> -->
       </div>
 
       <h4 class="text-center py-40">Se alle produkter</h4>
@@ -121,10 +128,10 @@ import palto from "../assets/images/palto.png";
     <section class="max-w-5xl mx-auto px-20 py-80">
       <h3 class="md:text-m md:pb-40 text-s text-brown-800 font-display font-semibold">Kategorier</h3>
       <div class="grid md:grid-cols-4 grid-cols-2 grid-row-2 justify-items-center gap-8">
-        <Kategoricard image={illu_bonner} name="Kuska" variant="Mellem ristet" prize="95 kr. - 265 kr." />
-        <Kategoricard image={illu_kande} name="Bodum Stempelkande" variant="8 kopper" prize="420 kr." />
-        <Kategoricard image={illu_kapsler} name="El Palto" variant="Mørk ristet" prize="95 kr. - 265 kr." />
-        <Kategoricard image={illu_papkasse} name="El Palto" variant="Mørk ristet" prize="95 kr. - 265 kr." />
+        <Kategoricard image={illu_bonner} name="Bønner" />
+        <Kategoricard image={illu_kande} name="Udstyr" />
+        <Kategoricard image={illu_kapsler} name="Kapsler" />
+        <Kategoricard image={illu_papkasse} name="Abonnement" />
       </div>
       <h4 class="text-center">Se alle produkter</h4>
     </section>
