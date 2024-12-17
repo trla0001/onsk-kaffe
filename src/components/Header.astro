@@ -5,6 +5,12 @@ import logo from "../assets/images/logo.svg";
 import shopping from "../assets/images/icons/shopping.svg";
 import user from "../assets/images/icons/user.svg";
 import search from "../assets/images/icons/search.svg";
+import gave from "../assets/images/produkter/gave.webp";
+import month from "../assets/images/produkter/month.png";
+import alturas from "../assets/images/produkter/alturas.webp";
+import team from "../assets/images/header/team.jpg";
+import report from "../assets/images/header/report.webp";
+import faq from "../assets/images/header/faq.jpg";
 ---
 
 <div class="flex justify-end pt-12 pb-12 lg:pb-40 px-28 md:px-88">
@@ -14,54 +20,87 @@ import search from "../assets/images/icons/search.svg";
   </ul>
 </div>
 
-<div x-data="{ showmenu: false }" class="sticky lg:sticky flex flex-col w-full z-50 py-12 px-28 md:px-88">
-  <div id="navbar" class="flex flex-row md:gap-68 justify-between items-center">
-    <!-- Logo -->
-    <div id="logo" class="flex items-center">
-      <a href="#index"><Image src={logo} alt="ØNSK logo" class="w-[110px] lg:w-full" /></a>
-    </div>
+<div class="headeranimation">
+  <div x-data="{ showmenu: false }" class="headeranimation1 bg-transparent fixed flex flex-col w-full z-50 py-12 px-28 md:px-88">
+    <div id="navbar" class="flex flex-row md:gap-68 justify-between items-center">
+      <!-- Logo -->
+      <div id="logo" class="flex items-center">
+        <a href="/"><Image src={logo} alt="ØNSK logo" class="w-[110px] lg:w-full" /></a>
+      </div>
 
-    <!-- Desktop menu -->
-    <nav id="desktopmenu" class="hidden lg:block w-full">
-      <div class="flex flex-row items-center justify-between">
-        <ul class="flex flex-row gap-36">
-          <li class="transition duration-200"><Link href="#">Kaffe</Link></li>
-          <li class="transition duration-200"><Link href="#">Kapsler</Link></li>
-          <li class="transition duration-200"><Link href="#">Udstyr</Link></li>
-          <li class="transition duration-200"><Link href="#">Abonnementer</Link></li>
-          <li class="transition duration-200"><Link href="#">Om os</Link></li>
-        </ul>
+      <!-- Desktop menu -->
+      <nav id="desktopmenu" class="hidden lg:block w-full">
+        <div class="flex flex-row items-center justify-between">
+          <ul class="flex flex-row gap-36">
+            <li class="transition duration-200"><Link href="#">Kaffe</Link></li>
+            <li class="transition duration-200"><Link href="#">Kapsler</Link></li>
+            <li class="transition duration-200"><Link href="#">Udstyr</Link></li>
+            <li class="transition duration-200 relative group flex justify-center">
+              <Link href="/abonnement">Abonnementer</Link>
+              <div class="absolute z-10 top-full hidden group-hover:flex bg-brown-100 rounded-lg p-40 gap-112 w-[747px]">
+                <div class="flex flex-col items-center w-1/3"><a href="/abonnement#abonnementer"><Image src={alturas} alt="Shoppe ikon" /><p class="pt-20 text-center font-display font-regular text-mobile_base md:text-base text-brown-800">Standard abonnement</p></a></div>
+                <div class="flex flex-col items-center w-1/3"><a href="/abonnement#abonnementer"><Image src={month} alt="Shoppe ikon" /><p class="pt-20 text-center font-display font-regular text-mobile_base md:text-base text-brown-800">Smags abonnement</p></a></div>
+                <div class="flex flex-col items-center w-1/3"><a href="/abonnement#abonnementer"><Image src={gave} alt="Shoppe ikon" /><p class="pt-20 text-center font-display font-regular text-mobile_base md:text-base text-brown-800">Gave abonnement</p></a></div>
+              </div>
+            </li>
+
+            <li class="transition duration-200 relative group flex justify-center">
+              <Link href="/om">Vores team</Link>
+              <div class="absolute z-10 top-full hidden group-hover:flex bg-brown-100 rounded-lg p-40 gap-112 w-[747px]">
+                <div class="flex flex-col items-center w-1/3"><a href="/om"><Image src={team} alt="Shoppe ikon" class="rounded-sm" /><p class="pt-20 text-center font-display font-regular text-mobile_base md:text-base text-brown-800">Vores team</p></a></div>
+                <div class="flex flex-col items-center w-1/3"><a href="#"><Image src={report} alt="Shoppe ikon" class="rounded-sm" /><p class="pt-20 text-center font-display font-regular text-mobile_base md:text-base text-brown-800">Impact report</p></a></div>
+                <div class="flex flex-col items-center w-1/3"><a href="#"><Image src={faq} alt="Shoppe ikon" class="rounded-sm" /><p class="pt-20 text-center font-display font-regular text-mobile_base md:text-base text-brown-800">Oftest stillede spørgmsål</p></a></div>
+              </div>
+            </li>
+          </ul>
+          <div class="flex gap-8">
+            <Image src={shopping} alt="Shoppe ikon" />
+            <Image src={user} alt="Bruger ikon" />
+            <Image src={search} alt="Søge ikon" />
+          </div>
+        </div>
+      </nav>
+
+      <!-- Burger Menu Button -->
+      <button id="burgermenu" class="flex flex-row items-center gap-16 lg:hidden" x-on:click="showmenu = ! showmenu">
         <div class="flex gap-8">
           <Image src={shopping} alt="Shoppe ikon" />
           <Image src={user} alt="Bruger ikon" />
           <Image src={search} alt="Søge ikon" />
         </div>
-      </div>
-    </nav>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-40 text-bordeaux-700">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+        </svg>
+      </button>
+    </div>
 
-    <!-- Burger Menu Button -->
-    <button id="burgermenu" class="flex flex-row items-center gap-16 lg:hidden" x-on:click="showmenu = ! showmenu">
-      <div class="flex gap-8">
-        <Image src={shopping} alt="Shoppe ikon" />
-        <Image src={user} alt="Bruger ikon" />
-        <Image src={search} alt="Søge ikon" />
-      </div>
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-40 text-bordeaux-700">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
-      </svg>
-    </button>
-  </div>
-
-  <!-- Mobile Menu -->
-  <div class="">
-    <nav id="mobilmenu" class="flex flex-col" x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false">
-      <ul class="flex flex-col items-end gap-32 bg-brown-100 rounded-lg px-20 py-40">
-        <li class="transition duration-200"><Link href="#">Kaffe</Link></li>
-        <li class="transition duration-200"><Link href="#">Kapsler</Link></li>
-        <li class="transition duration-200"><Link href="#">Udstyr</Link></li>
-        <li class="transition duration-200"><Link href="#">Abonnementer</Link></li>
-        <li class="transition duration-200"><Link href="#">Om os</Link></li>
-      </ul>
-    </nav>
+    <!-- Mobile Menu -->
+    <div class="">
+      <nav id="mobilmenu" class="flex flex-col" x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false">
+        <ul class="flex flex-col items-end gap-32 bg-brown-100 rounded-lg px-20 py-40">
+          <li class="transition duration-200"><Link href="#">Kaffe</Link></li>
+          <li class="transition duration-200"><Link href="#">Kapsler</Link></li>
+          <li class="transition duration-200"><Link href="#">Udstyr</Link></li>
+          <li class="transition duration-200"><Link href="#">Abonnementer</Link></li>
+          <li class="transition duration-200"><Link href="#">Vores team</Link></li>
+        </ul>
+      </nav>
+    </div>
   </div>
 </div>
+<script>
+  /* Import af Motion One biblioteket */
+  import { animate, scroll } from "motion";
+
+  scroll(
+    animate(".headeranimation1", {
+      opacity: [1],
+      transform: ["translateY(0)", "translateY(-20vh)"],
+      backgroundColor: ["rgba(232, 218, 207, 100)"],
+    }),
+    {
+      target: document.querySelector(".headeranimation"),
+      offset: ["0vh", "20vh"],
+    }
+  );
+</script>

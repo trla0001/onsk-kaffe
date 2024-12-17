@@ -8,7 +8,7 @@ import Button from "../components/Button.astro";
 <section class="group bg-brown-100 rounded-lg flex flex-col items-center justify-end w-[288px] h-[442px] flex-shrink-0 pb-40 px-40 hover:shadow-drop25 relative">
   <a href="#">
     <div class="z-10 pb-52"><Image src={image} alt="" class="w-[214px] group-hover:slide-top" /></div>
-    <article class="w-full pb-24">
+    <article class="w-full flex flex-col justify-between pb-24 h-[130px]">
       {
         badgerabat == "true" && (
           <div class="absolute top-40 bg-bordeaux-700 text-brown-50 p-16 rounded-xs font-body font-regular text-mobile_base md:text-base_xs">
@@ -16,8 +16,10 @@ import Button from "../components/Button.astro";
           </div>
         )
       }
-      <h3 class="font-display font-semibold text-mobile_s md:text-xxs text-brown-800 pb-8">{name}</h3>
-      <p class="font-body font-regular text-mobile_base md:text-base_xs text-brown-800 pb-0">{variant}</p>
+      <div>
+        <h3 class="font-display font-semibold text-mobile_s md:text-xxs text-brown-800 pb-8">{name}</h3>
+        <p class="font-body font-regular text-mobile_base md:text-base_xs text-brown-800 pt-0">{variant}</p>
+      </div>
       <p class="font-display font-semibold text-mobile_s md:text-xxs text-bordeaux-700 place-self-end">{prize}</p>
     </article>
     <div class="justify-self-center"><Button>Byg dit abonnement</Button></div>
