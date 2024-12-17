@@ -11,6 +11,9 @@ import gave from "../assets/images/produkter/gave.webp";
 import branchbig from "../assets/images/branch-big.svg";
 import branchsmall from "../assets/images/branch-small.svg";
 import beans from "../assets/images/beans.png";
+import samlet from "../assets/images/produkter/samlet.png";
+import kop from "../assets/images/kop.svg";
+import kopkaffe from "../assets/images/kop.png";
 ---
 
 <MainLayout title="Titel">
@@ -38,7 +41,7 @@ import beans from "../assets/images/beans.png";
     </article>
   </section>
 
-  <section id="kvali" class="grid lg:grid-cols-12 py-68 px-20 md:px-32 relative parallaxgrafik">
+  <section id="kvali" class="grid lg:grid-cols-12 mt-68 mb-288 px-20 md:px-32 relative parallaxgrafik">
     <div class="absolute z-10 grid place-items-end w-full -top-112 lg:-top-176 parallaxgrafik1"><Image src={beans} alt="" class="-scale-x-100 w-[250px] lg:w-[424px]" /></div>
     <article class="md:col-start-2 md:col-span-4 md:row-start-1 md:row-span-1 pb-40 md:pb-0">
       <h2 class="font-display font-bold text-mobile_m md:text-m text-brown-800 pb-40">Kvalitet i Hver Eneste Detalje</h2>
@@ -51,16 +54,31 @@ import beans from "../assets/images/beans.png";
       <p class="font-body font-regular text-mobile_base md:text-base text-brown-800">Fra den lette, frugtige friskhed, hvor du kan finde subtile noter af citrus og bær, til de mørkere, dybere nuancer med hints af chokolade, karamel og krydderier.</p>
     </article>
   </section>
-  <div class="absolute z-10"><Image src={branchbig} alt="" class="" /></div>
 
-  <section id="calculator">
-    <article>
-      <h2>Hvor meget kaffe passer til mig?</h2>
-      <p>Flyt cirklen langs bjælken på hvor meget kaffe din hustand drikker om dagen.</p>
-      <p>Så beregner vi hvor meget kaffe der passer til dine behov.</p>
-    </article>
-    <article></article>
-    <article></article>
+  <section id="calculator" class="relative">
+    <div class="absolute z-10 grid place-items-start w-full -top-112 lg:-top-360"><Image src={branchbig} alt="" class="w-[250px] lg:w-[424px]" /></div>
+    <div class="grid lg:grid-cols-3 bg-brown-100 mx-20 md:mx-32 py-68 px-20 rounded-lg gap-112 lg:gap-40">
+      <article>
+        <h2 class="font-display font-bold text-mobile_s md:text-s text-brown-800 pb-40">Hvor meget kaffe passer til mig?</h2>
+        <p class="font-body font-regular text-mobile_base md:text-base text-brown-800 pb-16">Flyt cirklen langs bjælken på hvor meget kaffe din hustand drikker om dagen.</p>
+        <p class="font-body font-regular text-mobile_base md:text-base text-brown-800 pb-20">Så beregner vi hvor meget kaffe der passer til dine behov.</p>
+        <p class="italic font-body font-regular text-mobile_base md:text-base text-brown-800">1 kop kaffe = 18 gram per dag</p>
+      </article>
+
+      <article class="grid justify-items-center lg:order-2">
+        <Image src={samlet} alt="" class="" />
+        <h3 class="font-display font-bold text-mobile_s md:text-s text-brown-800">1x 500</h3>
+        <h3 class="font-display font-bold text-mobile_s md:text-s text-brown-800">Grams poser</h3>
+        <h4 class="font-display font-regular text-mobile_base md:text-base text-brown-800">Hver måned</h4>
+      </article>
+
+      <!-- Lavet med inspiration fra Vue Range Slider (https://codepen.io/netzzwerg/pen/mXWNEL?editors=1000) -->
+      <article class="grid justify-items-center items-center gap-40">
+        <Image src={kop} alt="" class="" />
+        <div id="slider-bar" class="h-28 w-full rounded-full bg-brown-50 relative grid items-center"><div id="slider-handle" class="absolute z-10 w-[58px] h-[58px] rounded-full bg-brown-800 text-brown-50 cursor-pointer grid place-items-center">1 kop</div></div>
+      </article>
+    </div>
+    <div class="absolute z-10 grid place-items-end w-full -bottom-192"><Image src={kopkaffe} alt="" class="" /></div>
   </section>
   <div class="absolute z-10 grid self-end"><Image src={branchsmall} alt="" class="-scale-x-100" /></div>
 </MainLayout>
