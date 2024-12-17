@@ -2,11 +2,12 @@
 const { name = "", image = "", variant = "", prize = "", badgerabat = "false" } = Astro.props;
 
 import { Image } from "astro:assets";
-import Button from "../components/Button.astro";
+import alturas from "../assets/images/produkter/alturas.webp";
+import Link from "../components/Link.astro";
 ---
 
-<section class="group bg-brown-100 rounded-lg flex flex-col items-center justify-end w-[288px] h-[442px] flex-shrink-0 pb-40 px-40 hover:shadow-drop25 relative">
-  <a href="#">
+<section x-data="{ showmenu: false }" class="relative">
+  <div x-on:click="showmenu = ! showmenu" class="group bg-brown-100 rounded-lg flex flex-col items-center justify-end w-[288px] h-[442px] flex-shrink-0 pb-40 px-40 hover:shadow-drop25 relative z-0 top-0 cursor-pointer">
     <div class="z-10 pb-52"><Image src={image} alt="" class="w-[214px] group-hover:slide-top" /></div>
     <article class="w-full flex flex-col justify-between pb-24 h-[130px]">
       {
@@ -22,8 +23,19 @@ import Button from "../components/Button.astro";
       </div>
       <p class="font-display font-semibold text-mobile_s md:text-xxs text-bordeaux-700 place-self-end">{prize}</p>
     </article>
-    <div class="justify-self-center"><Button>Byg dit abonnement</Button></div>
-  </a>
-</section>
+    <div class="justify-self-center"><Link>Byg dit abonnement</Link></div>
+  </div>
 
-<section></section>
+  <div x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false" class="grid grid-cols-2 bg-brown-100 rounded-lg w-[800px] h-[600px] absolute z-20 top-32 left-0 items-center justify-center">
+    <article class="flex flex-col">
+      <Image src={alturas} alt="" class="w-[214px] group-hover:slide-top" />
+      <h4>Standard abonnement</h4>
+      <p>Fast kaffevariant</p>
+    </article>
+    <article class="flex flex-col">
+      <h5>Velkommen til</h5>
+      <p>Tyk på start</p>
+      <Link>Start</Link>
+    </article>
+  </div>
+</section>
