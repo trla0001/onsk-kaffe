@@ -2,24 +2,37 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import Kategoricard from "../components/Kategoricard.astro";
+import Caruosel from "../components/Caruosel.astro";
 import Accordion from "../components/Accordion.astro";
+import CardTrustpilot from "../components/CardTrustpilot.astro";
+import CardProduct from "../components/CardProduct.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 import thumbsup from "../assets/images/thumbsup.png";
+import handkaffe from "../assets/images/handkaffe.png";
 import branchsmall from "../assets/images/branch-small.svg";
 import branchbig from "../assets/images/branch-big.svg";
 import branchsmedium from "../assets/images/branch-medium.svg";
 import ejerne from "../assets/images/ejerne.png";
-import handkaffe from "../assets/images/handkaffe.png";
----
+import kaffe1 from "../assets/images/kaffe1.png";
+import kaffe2 from "../assets/images/kaffe2.png";
+import vand_kaffe from "../assets/images/vand_kaffe.png";
 
-<p class="text-right mr-64">Privat Erhverv</p>
+import illu_bonner from "../assets/images/illu_bonner.png";
+import illu_kande from "../assets/images/illu_kande.png";
+import illu_kapsler from "../assets/images/illu_kapsler.png";
+import illu_papkasse from "../assets/images/illu_papkasse.png";
+
+import kuska from "../assets/images/kuska.png";
+import stempelkande from "../assets/images/bodum.png";
+import palto from "../assets/images/palto.png";
+---
 
 <MainLayout title="Titel">
   <article>
     <!-- Hero billede -->
     <div class="flex relative">
-      <Image src={handkaffe} class="absolute top-64 left-0 z-10 md:w-[600px] w-[200px] h-auto" alt="Ønsk kaffepose i en hånd over bønner" />
+      <Image src={handkaffe} class="absolute top-[120px] left-0 z-10 md:w-[500px] w-[200px] h-auto" alt="Ønsk kaffepose i en hånd over bønner" />
     </div>
 
     <!-- Hero sektion -->
@@ -27,83 +40,106 @@ import handkaffe from "../assets/images/handkaffe.png";
       <div class="md:grid md:grid-cols-3">
         <div></div>
         <div class="md:col-span-2">
-          <h1 class="md:text-2xl md:text-left text-center text-l">ØNSK</h1>
-          <h2 class="md:text-m md:text-left text-center text-s">God smag, lige til din hoveddør - hver måned</h2>
+          <h1 class="md:text-2xl md:text-left text-brown-800 font-display font-bold text-center text-l pt-80">ØNSK</h1>
+          <h2 class="md:text-m md:text-left text-brown-800 font-display text-center text-s">God smag, lige til din hoveddør - hver måned</h2>
           <Button />
         </div>
       </div>
     </section>
 
     <!-- ILLUSTRATION -->
-    <div class="flex justify-end">
-      <Image src={branchsmall} alt="Lille kaffe gren" />
+    <div class="flex justify-end relative">
+      <Image src={branchsmall} class="absolute md:top-[-00px] top-[-100px] left-0 z-10" alt="Lille kaffe gren" />
     </div>
 
+    <div class="flex relative">
+      <Image src={branchbig} class="absolute md:top-[170px] top-[-100px] left-[00px] z-10" alt="Stor kaffe gren" />
+    </div>
+    <!--  -->
+
     <!-- KAFFE PÅ ABONNEMENT -->
-    <section class="max-w-5xl mx-auto">
-      <div class="md:grid grid-cols-3">
+    <section class="max-w-5xl mx-auto px-20">
+      <div class="md:grid grid-cols-3 py-80">
         <div></div>
         <div class="col-span-2">
-          <h2 class="md:text-m text-s">Kaffe på abonnement</h2>
-          <h3 class="md:text-xs text-xxs">Kaffebranchen savner gennemskuelighed</h3>
-          <p>
-            Alt for ofte er det umuligt for kaffedrikkere at tyde, hvor deres kaffe kommer fra, hvordan den bliver handlet, og hvilke forhold den er skabt under. ØNSK står i kontrast til dette, og vi er båret af et brændende ønske om at være præcis det modsatte. Nemlig en gennemskuelig kaffevirksomhed, der handler direkte med vores kaffebønder og
-            investerer tid og penge tilbage i deres produktion.
+          <h2 class="md:text-m text-brown-800 font-display font-semibold text-s">Kaffe på abonnement</h2>
+          <h3 class="md:text-xs text-xxs text-brown-800 font-display">Kaffebranchen savner gennemskuelighed</h3>
+          <br />
+          <p class="font-body text-brown-800 text-mobile_base md:text-base">
+            Alt for ofte er det umuligt for kaffedrikkere at tyde, hvor deres kaffe kommer fra, hvordan den bliver handlet, og hvilke forhold den er skabt under. <br /><br /> ØNSK står i kontrast til dette, og vi er båret af et brændende ønske om at være præcis det modsatte. Nemlig en gennemskuelig kaffevirksomhed, der handler direkte med vores
+            kaffebønder og investerer tid og penge tilbage i deres produktion.
           </p>
-          <Button />
+          <button class="bg-bordeaux-700 text-brown-50 my-40 p-8 rounded-lg">DET HER ER EN KNAP</button>
         </div>
       </div>
     </section>
-
-    <Image src={branchbig} alt="Stor kaffe gren" />
 
     <!-- POPULÆRE PRODUKTER -->
     <section class="max-w-5xl mx-auto">
-      <h2 class="md:text-m text-s">Populære produkter</h2>
-      <!-- CARDS -->
-      <h4>Se alle produkter</h4>
+      <h2 class="md:text-m text-s text-brown-800 font-display font-semibold">Populære produkter</h2>
+
+      <div class="block md:hidden pt-80 justify-items-center overflow-hidden">
+        <Caruosel>
+          <CardProduct image={} name="Kuska" variant="Mellem ristet" prize="95 kr. - 265 kr." />
+          <CardProduct image={} name="Bodum Stempelkande" variant="8 kopper" prize="420 kr." />
+          <CardProduct image={} name="El Palto" variant="Mørk ristet" prize="95 kr. - 265 kr." />
+        </Caruosel>
+      </div>
+      <div class="hidden md:block md:grid md:grid-cols-3 pt-80 justify-items-center overflow-hidden pb-20">
+        <CardProduct image={} name="Kuska" variant="Mellem ristet" prize="95 kr. - 265 kr." />
+        <CardProduct image={} name="Bodum Stempelkande" variant="8 kopper" prize="420 kr." />
+        <CardProduct image={} name="El Palto" variant="Mørk ristet" prize="95 kr. - 265 kr." />
+      </div>
+
+      <h4 class="text-center py-40">Se alle produkter</h4>
     </section>
 
     <!-- VORES ØNSKE -->
-    <section class="bg-brown-100">
-      <div class="max-w-5xl mx-auto grid grid-cols-2">
-        <!-- Billede af kaffe der fyldt vand I -->
-
-        <Image src={ejerne} alt="Rasmus og Andreas tegnet illustration" />
-        <div>
-          <h2 class="md:text-m text-s">Vores ønske</h2>
-          <p>
-            ØNSK blev grundlagt i 2017 af makkerparret Rasmus og Andreas, med et ønske om at skabe en anderledes kaffevirksomhed. Deres vision var at skabe en virksomhed, der ikke kun handlede om kvalitets kaffe, men også om at gøre en positiv forskel. For kaffebønderne, for kunderne og for planeten. Som et certificeret B Corp har vi officielt
-            erklæret, at vores højeste formål som virksomhed er at bidrage til en bedre verden.
+    <section class="bg-brown-100 py-20">
+      <div class="md:w-288 w-192 flex relative">
+        <Image src={vand_kaffe} class="absolute md:top-[-200px] top-[-100px] left-0 z-10" alt="Vand der hælder op i en kaffe" />
+      </div>
+      <div class="max-w-5xl mx-auto grid md:grid-cols-2 items-center">
+        <Image src={ejerne} class="" alt="Rasmus og Andreas tegnet illustration" />
+        <div class="px-20">
+          <h2 class="md:text-m text-brown-800 font-display font-semibold text-s">Vores ønske</h2>
+          <p class="text-brown-800 font-body text-mobile_base md:text-base">
+            ØNSK blev grundlagt i 2017 af makkerparret Rasmus og Andreas, med et ønske om at skabe en anderledes kaffevirksomhed. Deres vision var at skabe en virksomhed, der ikke kun handlede om kvalitets kaffe, men også om at gøre en positiv forskel. For kaffebønderne, for kunderne og for planeten.
+            <br /><br />
+             Som et certificeret B Corp har vi officielt erklæret, at vores højeste formål som virksomhed er at bidrage til en bedre verden.
           </p>
-          <!-- <Button /> -->
+          <button class="bg-bordeaux-700 text-brown-50 my-40 p-8 rounded-lg">DET HER ER EN KNAP</button>
         </div>
       </div>
     </section>
 
-    <div class="flex justify-end">
-      <Image src={branchsmedium} alt="Lille kaffe gren" />
+    <div class="flex justify-end relative">
+      <Image src={branchsmedium} class="absolute md:top-[-100px] top-[-100px] left-0 z-10 w-40 md:w-[400px] object-contain" alt="mellem kaffe gren" />
     </div>
 
     <!-- KATEGORIER -->
-    <section class="max-w-5xl mx-auto">
-      <h3 class="md:text-m text-s">Kategorier</h3>
-      <div class="grid grid-cols-4">
-        <Kategoricard />
-        <Kategoricard />
-        <Kategoricard />
-        <Kategoricard />
+    <section class="max-w-5xl mx-auto px-20 py-80">
+      <h3 class="md:text-m md:pb-40 text-s text-brown-800 font-display font-semibold">Kategorier</h3>
+      <div class="grid md:grid-cols-4 grid-cols-2 grid-row-2 justify-items-center gap-8">
+        <Kategoricard image={illu_bonner} name="Kuska" variant="Mellem ristet" prize="95 kr. - 265 kr." />
+        <Kategoricard image={illu_kande} name="Bodum Stempelkande" variant="8 kopper" prize="420 kr." />
+        <Kategoricard image={illu_kapsler} name="El Palto" variant="Mørk ristet" prize="95 kr. - 265 kr." />
+        <Kategoricard image={illu_papkasse} name="El Palto" variant="Mørk ristet" prize="95 kr. - 265 kr." />
       </div>
       <h4 class="text-center">Se alle produkter</h4>
     </section>
 
-    <div class="transform scale-x-[-1]">
-      <Image src={branchbig} alt="Stor kaffe gren" />
+    <div class="relative">
+      <Image src={branchsmall} alt="Lille kaffe gren" class="transform scale-x-[-1] absolute left-0" />
     </div>
 
-    <!-- HVORFOR HANDLE HOS OS? -->
-    <section class="m-16">
-      <h2 class="md:text-m max-w-xl mx-auto text-s">Hvorfor handle hos os?</h2>
+    <div class="transform scale-x-[-1] relative">
+      <Image src={branchbig} class="absolute md:top-[270px] top-[-100px] left-0 z-10 w-40 md:w-[400px] object-contain" alt="Stor kaffe gren" />
+    </div>
+
+    <!-- HVORFOR HANDLE HOS OS? ---- ACCORDION -->
+    <section class="m-16 py-192">
+      <h2 class="md:text-m max-w-xl mx-auto text-s text-brown-800 font-display font-semibold">Hvorfor handle hos os?</h2>
       <div class="max-w-xl mx-auto">
         <Accordion question="Direkte handel og social ansvarlighed" answer="ØNSK sikrer retfærdige priser for kaffebønder ved at eliminere mellemled og opbygge længerevarende relationer, samtidig med at de bekæmper fattigdom og forbedrer levevilkår for bønderne." />
         <Accordion question="Bæredygtighed og økologisk produktion" answer="Virksomheden investerer i bæredygtige landbrugspraksisser, dyrker økologisk kaffe gennem skovlandbrug og hjælper med at reducere CO2-udledninger, forbedre jordens sundhed og øge biodiversiteten." />
@@ -112,8 +148,19 @@ import handkaffe from "../assets/images/handkaffe.png";
     </section>
 
     <!-- TRUSTPILOT -->
+    <div class="md:w-288 w-192 flex relative">
+      <Image src={kaffe1} class="absolute md:top-[100px] top-[100px] left-0 z-10" alt="En kop kaffe" />
+    </div>
     <section>
-      <!-- <Trustpilot /> -->
+      <CardTrustpilot image="/trustpilot/image-1.png" navn="Mikkel" text="Hurtig leveringstid samt mulighed for at nyde min kaffe med god samvittighed og vide at jeg støtter en god sag." />
+      <CardTrustpilot image="/trustpilot/image-1.png" navn="Johanne" text="Ubetinget kvalitetsprodukter, som har gjort mig til en begejstret og fast kunde - og produktambassadør." />
+      <CardTrustpilot image="/trustpilot/image-1.png" navn="Rasmus" text="Det rigtige sted at handle for en kvalitetsbevidst kaffedrikker." />
+      <CardTrustpilot image="/trustpilot/image-1.png" navn="Kim" text="ØNSK sørger for at flere penge går til dem, der producerer kaffen. Det er fantastisk. " />
+      <CardTrustpilot image="/trustpilot/image-1.png" navn="Lia" text="Jeg har nu flere gange bestilt kaffe fra Ønsk, som altid er super lækkert og friskt." />
+      <CardTrustpilot image="/trustpilot/image-1.png" navn="Simon" text="Utroligt billige friskristede af høj kvalitet. Abonnementet virker fortrinligt." />
     </section>
+    <div class="md:w-288 w-192 flex relative">
+      <Image src={kaffe2} class="absolute md:top-[200px] top-[100px] left-[100px] z-0" alt="En anden kop kaffe" />
+    </div>
   </article>
 </MainLayout>

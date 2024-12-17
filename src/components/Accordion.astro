@@ -2,12 +2,12 @@
 const { question = "", answer = "" } = Astro.props;
 ---
 
-<details class="group border-b-s border-turquoise-800 text-turquoise-800 py-xs">
+<details class="group border-b-s border-brown-800 py-xs">
   <summary class="font-body text-p font-bold flex items-center justify-between cursor-pointer py-4">
     {question}
     <span class="transition-transform group-open:rotate-180">
       <p>▼</p>
     </span>
   </summary>
-  <article class="font-body text-p pt-xs text-turquoise-800">{answer}</article>
+  <article class="font-body text-brown-800 text-mobile_base md:text-base text-p pt-xs">{answer}</article>
 </details>
