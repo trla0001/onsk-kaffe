@@ -14,54 +14,72 @@ import search from "../assets/images/icons/search.svg";
   </ul>
 </div>
 
-<div x-data="{ showmenu: false }" class="sticky lg:sticky flex flex-col w-full z-50 py-12 px-28 md:px-88">
-  <div id="navbar" class="flex flex-row md:gap-68 justify-between items-center">
-    <!-- Logo -->
-    <div id="logo" class="flex items-center">
-      <a href="#index"><Image src={logo} alt="ØNSK logo" class="w-[110px] lg:w-full" /></a>
+<div class="headeranimation">
+  <div x-data="{ showmenu: false }" class="headeranimation1 bg-transparent fixed flex flex-col w-full z-50 py-12 px-28 md:px-88">
+    <div id="navbar" class="flex flex-row md:gap-68 justify-between items-center">
+      <!-- Logo -->
+      <div id="logo" class="flex items-center">
+        <a href="#index"><Image src={logo} alt="ØNSK logo" class="w-[110px] lg:w-full" /></a>
+      </div>
+
+      <!-- Desktop menu -->
+      <nav id="desktopmenu" class="hidden lg:block w-full">
+        <div class="flex flex-row items-center justify-between">
+          <ul class="flex flex-row gap-36">
+            <li class="transition duration-200"><Link href="#">Kaffe</Link></li>
+            <li class="transition duration-200"><Link href="#">Kapsler</Link></li>
+            <li class="transition duration-200"><Link href="#">Udstyr</Link></li>
+            <li class="transition duration-200"><Link href="#">Abonnementer</Link></li>
+            <li class="transition duration-200"><Link href="#">Om os</Link></li>
+          </ul>
+          <div class="flex gap-8">
+            <Image src={shopping} alt="Shoppe ikon" />
+            <Image src={user} alt="Bruger ikon" />
+            <Image src={search} alt="Søge ikon" />
+          </div>
+        </div>
+      </nav>
+
+      <!-- Burger Menu Button -->
+      <button id="burgermenu" class="flex flex-row items-center gap-16 lg:hidden" x-on:click="showmenu = ! showmenu">
+        <div class="flex gap-8">
+          <Image src={shopping} alt="Shoppe ikon" />
+          <Image src={user} alt="Bruger ikon" />
+          <Image src={search} alt="Søge ikon" />
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-40 text-bordeaux-700">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+        </svg>
+      </button>
     </div>
 
-    <!-- Desktop menu -->
-    <nav id="desktopmenu" class="hidden lg:block w-full">
-      <div class="flex flex-row items-center justify-between">
-        <ul class="flex flex-row gap-36">
+    <!-- Mobile Menu -->
+    <div class="">
+      <nav id="mobilmenu" class="flex flex-col" x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false">
+        <ul class="flex flex-col items-end gap-32 bg-brown-100 rounded-lg px-20 py-40">
           <li class="transition duration-200"><Link href="#">Kaffe</Link></li>
           <li class="transition duration-200"><Link href="#">Kapsler</Link></li>
           <li class="transition duration-200"><Link href="#">Udstyr</Link></li>
           <li class="transition duration-200"><Link href="#">Abonnementer</Link></li>
           <li class="transition duration-200"><Link href="#">Om os</Link></li>
         </ul>
-        <div class="flex gap-8">
-          <Image src={shopping} alt="Shoppe ikon" />
-          <Image src={user} alt="Bruger ikon" />
-          <Image src={search} alt="Søge ikon" />
-        </div>
-      </div>
-    </nav>
-
-    <!-- Burger Menu Button -->
-    <button id="burgermenu" class="flex flex-row items-center gap-16 lg:hidden" x-on:click="showmenu = ! showmenu">
-      <div class="flex gap-8">
-        <Image src={shopping} alt="Shoppe ikon" />
-        <Image src={user} alt="Bruger ikon" />
-        <Image src={search} alt="Søge ikon" />
-      </div>
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-40 text-bordeaux-700">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
-      </svg>
-    </button>
-  </div>
-
-  <!-- Mobile Menu -->
-  <div class="">
-    <nav id="mobilmenu" class="flex flex-col" x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false">
-      <ul class="flex flex-col items-end gap-32 bg-brown-100 rounded-lg px-20 py-40">
-        <li class="transition duration-200"><Link href="#">Kaffe</Link></li>
-        <li class="transition duration-200"><Link href="#">Kapsler</Link></li>
-        <li class="transition duration-200"><Link href="#">Udstyr</Link></li>
-        <li class="transition duration-200"><Link href="#">Abonnementer</Link></li>
-        <li class="transition duration-200"><Link href="#">Om os</Link></li>
-      </ul>
-    </nav>
+      </nav>
+    </div>
   </div>
 </div>
+<script>
+  /* Import af Motion One biblioteket */
+  import { animate, scroll } from "motion";
+
+  scroll(
+    animate(".headeranimation1", {
+      opacity: [1],
+      transform: ["translateY(0)", "translateY(-20vh)"],
+      backgroundColor: ["rgba(232, 218, 207, 100)"],
+    }),
+    {
+      target: document.querySelector(".headeranimation"),
+      offset: ["0vh", "20vh"],
+    }
+  );
+</script>
