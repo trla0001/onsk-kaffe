@@ -4,6 +4,7 @@ import CardAbonnement from "../components/CardAbonnement.astro";
 import Hero_undersider from "../components/Hero_undersider.astro";
 import CardTips from "../components/CardTips.astro";
 import Carousel from "../components/Carousel.astro";
+import Caruosel from "../components/Caruosel.astro";
 import CarouselIkon from "../components/CarouselIkon.astro";
 
 import { Image } from "astro:assets";
@@ -34,12 +35,16 @@ import steammilk from "../assets/images/tips/steammilk.webp";
     <Hero_undersider illustration={hero} overskrift="Abonnementer" />
   </section>
 
-  <section id="abonnementer" class="mt-68 mb-288 mx-32 grid justify-items-center overflow-hidden">
-    <div class="grid grid-cols-3 gap-x-112">
-      <h2 class="col-start-1 col-span-3 row-start-1 row-span-1 font-display font-bold text-mobile_m md:text-m text-brown-800 pb-80">Find dit abonnement</h2>
-      <CardAbonnement image={alturas} name="Standard abonnement" variant="Fast kaffevariant" prize="85,50 kr. - 238,50 kr." badgerabat="true" />
-      <CardAbonnement image={month} name="Smags abonnement" variant="Fast kaffevariant + månedens kaffe" prize="95 kr. - 265 kr." />
-      <CardAbonnement image={gave} name="Gave abonnement" variant="Fast kaffevariant" prize="400 kr. - 4.140 kr. " />
+  <section id="abonnementer" class="mt-68 mb-288 mx-20 md:mx-32 grid justify-items-center">
+    <div class="grid grid-cols-3">
+      <h2 class="col-start-1 col-span-3 row-start-1 row-span-1 font-display font-bold text-mobile_m md:text-m text-brown-800">Find dit abonnement</h2>
+      <div class="col-start-1 col-span-3 row-start-2 row-span-1">
+        <Caruosel>
+          <CardAbonnement image={alturas} name="Standard abonnement" variant="Fast kaffevariant" prize="85,50 kr. - 238,50 kr." badgerabat="true" />
+          <CardAbonnement image={month} name="Smags abonnement" variant="Fast kaffevariant + månedens kaffe" prize="95 kr. - 265 kr." />
+          <CardAbonnement image={gave} name="Gave abonnement" variant="Fast kaffevariant" prize="400 kr. - 4.140 kr. " />
+        </Caruosel>
+      </div>
     </div>
   </section>
 
