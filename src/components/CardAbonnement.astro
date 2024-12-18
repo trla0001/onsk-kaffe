@@ -2,7 +2,7 @@
 const { name = "", image = "", variant = "", prize = "", badgerabat = "false" } = Astro.props;
 
 import { Image } from "astro:assets";
-import Button from "../components/Button.astro";
+import Link from "../components/Link.astro";
 ---
 
 <section class="group bg-brown-100 rounded-lg flex flex-col items-center justify-end w-[288px] h-[442px] flex-shrink-0 pb-40 px-40 hover:shadow-drop25 relative">
@@ -22,6 +22,6 @@ import Button from "../components/Button.astro";
       </div>
       <p class="font-display font-semibold text-mobile_s md:text-xxs text-bordeaux-700 place-self-end">{prize}</p>
     </article>
-    <div class="justify-self-center"><Button>Byg dit abonnement</Button></div>
+    <div class="justify-self-center"><Link variant="primary" size="small">Byg dit abonnement</Link></div>
   </a>
 </section>
