@@ -5,11 +5,11 @@ import arrow from "../assets/images/icons/arrow.svg";
 ---
 
 <details class="group border-b-s border-brown-800 py-4">
-  <summary class="font-body md:text-base text-mobile_base text-brown-800 font-bold flex items-center justify-between cursor-pointer py-8">
+  <summary class="font-body font-bold md:text-base text-mobile_base text-brown-800 flex items-center justify-between cursor-pointer py-8">
     {question}
     <span class="transition-transform group-open:rotate-180">
       <p><Image src={arrow} alt="" /></p>
     </span>
   </summary>
-  <article class="font-body text-brown-800 text-mobile_base md:text-base text-p pt-8">{answer}</article>
+  <article class="font-body font-regular text-brown-800 text-mobile_base md:text-base text-p pt-8">{answer}</article>
 </details>
