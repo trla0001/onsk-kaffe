@@ -1,6 +1,88 @@
 ---
+import { Image } from "astro:assets";
+import dame from "../assets/images/dame_og_sol.webp";
+
+import fb from "../assets/images/fb.png";
+import ig from "../assets/images/ig.png";
+import linkedin from "../assets/images/linkedin.png";
+
+import firma1 from "../assets/images/firma1.png";
+import firma2 from "../assets/images/firma2.png";
+import firma3 from "../assets/images/firma3.png";
+import firma4 from "../assets/images/firma4.png";
+import firma5 from "../assets/images/firma5.png";
+import firma6 from "../assets/images/firma6.png";
+import firma7 from "../assets/images/firma7.png";
+import firma8 from "../assets/images/firma8.png";
 ---
-<div>
-<p>Footer - tilføj footerindhold</p>
+
+<div class="flex relative">
+  <Image src={dame} class="" alt="footer" />
 </div>
-  
+
+<div class="bg-green-700 p-40">
+  <div class="md:text-left text-center text-brown-50 grid md:grid-cols-3 md:grid-rows-2 mx-80">
+    <!-- Adresser -->
+    <div>
+      <h3>Risteri</h3>
+      <h3>Kattegatvej 53 <br /> 2150, Nordhavn</h3>
+    </div>
+
+    <div>
+      <h3>Kontor</h3>
+      <h3>Lundtoftegade 23 <br /> 2200, København N</h3>
+    </div>
+
+    <div>
+      <h3>Kundeservice</h3>
+      <h3>Tlf: +45 94 09 02 10 <br /> Tilmeld leveranceservice</h3>
+    </div>
+
+    <!-- IKONER -->
+    <div class="grid grid-cols-3 gap-20 md:w-[240px]">
+      <div>
+        <Image src={fb} class="h-40 w-40" alt="Facebook ikon" />
+      </div>
+      <div>
+        <Image src={ig} class="h-40 w-40" alt="Instagram ikon" />
+      </div>
+      <div>
+        <Image src={linkedin} class="h-40 w-40" alt="LinkedIn ikon" />
+      </div>
+    </div>
+
+    <!-- NYHEDSBREV -->
+    <form class="w-[250px]">
+      <h3>Tilmeld nyhedsbrev</h3>
+      <div class="mb-5">
+        <input type="text" id="name" class="text-brown-800 bg-brown-50 border text-sm rounded-xs focus:ring-brown-800 focus:border-brown-800 block w-full p-2.5" placeholder="Navn:" required />
+      </div>
+      <div class="mb-5">
+        <input type="email" id="email" class="text-brown-800 bg-brown-50 border text-sm rounded-xs focus:ring-brown-800 focus:border-brown-800 block w-full p-2.5" placeholder="Mail:" required />
+      </div>
+    </form>
+
+    <!-- FAQ -->
+    <div class="text-center md:text-left text-brown-50">
+      <h3>FAQ - Ofte stillede spørgsmål</h3>
+      <h3>Job hos ØNSK?</h3>
+    </div>
+  </div>
+  <div class="grid grid-cols-4 md:grid-cols-8 gap-4 items-center py-16">
+    <Image src={firma1} class="h-24 w-auto mx-auto" alt="Mobilepay" />
+    <Image src={firma2} class="h-52 w-auto mx-auto" alt="Postnord" />
+    <Image src={firma3} class="h-24 w-auto mx-auto" alt="dao" />
+    <Image src={firma4} class="h-52 w-auto mx-auto" alt="applepay" />
+    <Image src={firma5} class="h-24 w-auto mx-auto" alt="Gpay" />
+    <Image src={firma6} class="h-24 w-auto mx-auto" alt="VISA" />
+    <Image src={firma7} class="h-24 w-auto mx-auto" alt="Mastercard" />
+    <Image src={firma8} class="h-68 w-auto mx-auto" alt="Burd delivery" />
+  </div>
+
+  <div class="grid grid-cols-4 text-brown-50 text-[10px] justify-items-center">
+    <p>Handelsbetingelser</p>
+    <p>Abonnentbetingelser</p>
+    <p>Cookie</p>
+    <p>Persondatapolitik</p>
+  </div>
+</div>
