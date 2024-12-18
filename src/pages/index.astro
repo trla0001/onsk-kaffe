@@ -43,36 +43,43 @@ import simon from "../assets/images/trustpilot/simon.webp";
 <MainLayout title="Titel">
   <article>
     <!-- Hero billede -->
-    <div class="flex relative">
-      <Image src={handkaffe} class="absolute top-[280px] left-0 z-10 md:w-[500px] w-[170px] h-auto" alt="Ønsk kaffepose i en hånd over bønner" />
-    </div>
+    <div class="flex relative"></div>
 
     <!-- Hero sektion -->
-    <section class="md:mx-20 bg-brown-100 rounded-lg mx-32">
+    <!--  <section class="md:mx-20 bg-brown-100 rounded-lg mx-32">
       <div class="md:grid md:grid-cols-3">
         <div></div>
         <div class="md:col-span-2">
           <h1 class="md:text-2xl md:text-left text-brown-800 font-display font-bold text-center text-l pt-80">ØNSK</h1>
           <div class="grid md:grid-cols-2">
             <h2 class="md:text-s md:text-left text-brown-800 font-display text-center text-mobile_s">God smag, lige til din hoveddør - hver måned</h2>
-            <!-- Knap bliver udskiftet med komponent -->
             <div class="flex items-center justify-center">
               <Link variant="primary" size="large">Shop</Link>
             </div>
-            <!-- ------ -->
           </div>
         </div>
       </div>
     </section>
+ -->
+    <section class="md:mx-20 bg-brown-100 rounded-lg mx-32">
+      <article class="grid md:grid-cols-12 grid-rows-2">
+        <div class="col-start-6 col-span-6 row-start-1 row-span-1"><h1 class="md:text-xl md:text-left text-brown-800 font-display font-bold text-center text-l">ØNSK</h1></div>
+        <div class="col-start-6 col-span-4 row-start-2 row-span-1"><h2 class="md:text-s md:text-left text-brown-800 font-display text-center text-mobile_s">God smag, lige til din hoveddør - hver måned</h2></div>
+        <div class="col-start-10 col-span-2 row-start-2 row-span-1">
+          <Link variant="primary" size="large" target="_self">Shop</Link>
+        </div>
+        <div class="col-start-1 col-span-4 row-start-1 row-span-1"><Image src={handkaffe} class="absolute top-[280px] left-0 z-10 md:w-[500px] w-[170px] h-auto" alt="Ønsk kaffepose i en hånd over bønner" /></div>
+      </article>
+    </section>
 
     <!-- ILLUSTRATION -->
-    <div class="flex justify-end relative">
+    <!--   <div class="flex justify-end relative">
       <Image src={branchsmall} class="absolute md:top-[0px] md:h-[300px] md:left-[1140px] h-[130px] top-[-50px] left-[230px] z-10" alt="Lille kaffe gren" />
     </div>
 
     <div class="flex relative">
       <Image src={branchbig} class="absolute md:top-[170px] top-[-100px] left-[00px] z-10" alt="Stor kaffe gren" />
-    </div>
+    </div> -->
     <!--  -->
 
     <!-- KAFFE PÅ ABONNEMENT -->
