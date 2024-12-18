@@ -1,9 +1,9 @@
 ---
-const { variant = "primary", size = "large" } = Astro.props;
+const { variant = "primary", size = "large", href = "#", target = "_self" } = Astro.props;
 
 const variantClasses = {
-  primary: "bg-bordeaux-700 font-bold text-brown-50 border-lg border-bordeaux-700 hover:bg-transparent hover:text-bordeaux-700 hover:border-bordeaux-700",
-  secondary: "text-base font-bold bg-transparent text-bordeaux-700 border-solid border-lg border-bordeaux-700 hover:bg-bordeaux-700 hover:text-brown-50 hover:border-bordeaux-700",
+  primary: "bg-bordeaux-700 font-bold text-brown-50 border-lg rounded-lg border-bordeaux-700 hover:bg-transparent hover:text-bordeaux-700 hover:border-bordeaux-700",
+  secondary: "text-base font-bold bg-transparent text-bordeaux-700 rounded-lg border-solid border-lg border-bordeaux-700 hover:bg-bordeaux-700 hover:text-brown-50 hover:border-bordeaux-700",
   menu_links: "text-mobile-xs md:text-xs text-brown-800 hover:underline font-display",
   links: "text-mobile-xs md:text-xs text-bordeaux-700 hover:underline font-display",
 };
@@ -11,11 +11,10 @@ const variantClasses = {
 const sizeClasses = {
   large: "py-24 px-64 text-base",
   small: "py-12 px-20 text-base_xs",
+  none: "p-0",
 };
 ---
 
-<div>
-  <button class:list={["rounded-lg transition-all duration-300", variantClasses[variant], sizeClasses[size]]}>
-    <slot />
-  </button>
-</div>
+<a href={href} target={target} class:list={[variantClasses[variant], sizeClasses[size]]}>
+  <slot />
+</a>
