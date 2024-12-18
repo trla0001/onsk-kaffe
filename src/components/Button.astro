@@ -2,17 +2,18 @@
 const { variant = "primary", size = "large" } = Astro.props;
 
 const variantClasses = {
-  primary: "",
-  secondary: "",
+  primary: "rounded-lg bg-bordeaux-700 font-bold text-brown-50 border-lg border-bordeaux-700 hover:bg-transparent hover:text-bordeaux-700 hover:border-bordeaux-700",
+  secondary: "rounded-lg text-base font-bold bg-transparent text-bordeaux-700 border-solid border-lg border-bordeaux-700 hover:bg-bordeaux-700 hover:text-brown-50 hover:border-bordeaux-700",
 };
 
 const sizeClasses = {
-  large: "",
-  medium: "",
-  small: "",
+  large: "py-24 px-64 text-base",
+  small: "py-12 px-20 text-base_xs",
 };
 ---
 
 <div>
-  <button class:list={[variantClasses[variant], sizeClasses[size]]}><slot /></button>
+  <button class:list={["rounded-lg transition-all duration-300", variantClasses[variant], sizeClasses[size]]}>
+    <slot />
+  </button>
 </div>

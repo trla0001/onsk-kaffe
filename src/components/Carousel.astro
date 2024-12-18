@@ -1,0 +1,45 @@
+---
+const { variant = "left" } = Astro.props;
+
+const variantClasses = {
+  left: "rounded-r-lg",
+  right: "rounded-l-lg",
+};
+---
+
+<article id="carousel" class:list={["bg-brown-100 overflow-x-auto snap-x snap-mandatory px-40", variantClasses[variant]]}>
+  <div class="flex items-center gap-32 w-max h-full py-40">
+    <slot />
+  </div>
+</article>
+
+<style>
+  /* Hide scrollbar but keep scroll functionality */
+  #carousel::-webkit-scrollbar {
+    display: none; /* Hide scrollbar in Webkit-based browsers (Chrome, Safari) */
+  }
+
+  #carousel {
+    -ms-overflow-style: none; /* Hide scrollbar in IE10+ */
+    scrollbar-width: none; /* Hide scrollbar in Firefox */
+  }
+</style>
+
+<!-- <article id="carousel" class="overflow-x-auto snap-x snap-mandatory bg-brown-100 px-40 rounded-l-lg">
+  <div class="flex items-center gap-32 w-max h-full py-40">
+    <slot />
+  </div>
+</article>
+
+<style>
+  /* Hide scrollbar but keep scroll functionality */
+  #carousel::-webkit-scrollbar {
+    display: none; /* Hide scrollbar in Webkit-based browsers (Chrome, Safari) */
+  }
+
+  #carousel {
+    -ms-overflow-style: none; /* Hide scrollbar in IE10+ */
+    scrollbar-width: none; /* Hide scrollbar in Firefox */
+  }
+</style>
+ -->

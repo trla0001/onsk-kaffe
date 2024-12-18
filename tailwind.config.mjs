@@ -1,7 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
-
+  safelist: [
+    "hover:border-brown-800", // Ensures hover border class is not purged
+  ],
   /* Vil du overskrive eller extende tailwinds indstillinger?  */
 
   theme: {
@@ -36,6 +38,7 @@ export default {
       36: "36px",
       40: "40px",
       52: "52px",
+      64: "64px",
       68: "68px",
       80: "80px",
       88: "88px",
