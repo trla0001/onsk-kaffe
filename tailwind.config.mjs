@@ -62,6 +62,7 @@ export default {
     fontSize: {
       "2xl": ["17.5rem"],
       xl: ["11.25rem"],
+      lplus: ["8.375rem"],
       l: ["4.375rem"],
       m: ["3.125rem"],
       s: ["2.1875rem"],
