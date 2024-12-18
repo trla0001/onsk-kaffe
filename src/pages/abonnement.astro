@@ -62,22 +62,22 @@ import steammilk from "../assets/images/tips/steammilk.webp";
     </article>
   </section>
 
-  <section id="kvali" class="grid lg:grid-cols-12 my-68 px-20 md:px-32 relative parallaxgrafik">
+  <section id="kvali" class="grid lg:grid-cols-12 my-192 md:my-68 px-20 md:px-32 relative parallaxgrafik">
     <div class="absolute z-10 grid place-items-end w-full -top-112 lg:-top-176 parallaxgrafik1"><Image src={beans} alt="" class="-scale-x-100 w-[250px] lg:w-[424px]" /></div>
     <article class="max-w-424 md:max-w-full mx-auto lg:col-start-2 md:col-span-5 lg:col-span-4 md:row-start-1 md:row-span-1 pb-40 md:pb-0">
-      <h2 class="font-display font-bold text-mobile_m md:text-m text-brown-800 pb-40">Kvalitet i Hver Eneste Detalje</h2>
+      <h2 class="font-display font-bold text-mobile_m md:text-m text-brown-800 pb-20 md:pb-40">Kvalitet i Hver Eneste Detalje</h2>
       <p class="font-body font-regular text-mobile_base md:text-base text-brown-800 pb-16">Hver bønne, vi rister, bærer på en historie. En historie om håndværk, passion og dedikation.</p>
       <p class="font-body font-regular text-mobile_base md:text-base text-brown-800">Som certificeret B Corp sætter vi bæredygtighed og social ansvarlighed i fokus. Fra ansvarlige dyrkningsmetoder til præcisionsristning sikrer vi, at hver bønne lever op til de højeste standarder.</p>
     </article>
     <article class="max-w-424 mx-auto md:col-start-6 lg:col-start-8 md:col-span-5 lg:col-span-4 md:row-start-2 md:row-span-1">
-      <h2 class="font-display font-bold text-mobile_m md:text-m text-brown-800 pb-40">Smagsrejsen med ØNSK kaffe</h2>
+      <h2 class="font-display font-bold text-mobile_m md:text-m text-brown-800 pb-20 md:pb-40">Smagsrejsen med ØNSK kaffe</h2>
       <p class="font-body font-regular text-mobile_base md:text-base text-brown-800 pb-16">Når du åbner en pakke ØNSK kaffe, træder du ind i en verden af smagsoplevelser.</p>
       <p class="font-body font-regular text-mobile_base md:text-base text-brown-800">Fra den lette, frugtige friskhed, hvor du kan finde subtile noter af citrus og bær, til de mørkere, dybere nuancer med hints af chokolade, karamel og krydderier.</p>
     </article>
   </section>
 
   <section id="calculator" class="relative">
-    <div class="absolute z-10 grid place-items-start w-full -top-112 lg:-top-360"><Image src={branchbig} alt="" class="w-[250px] lg:w-[424px]" /></div>
+    <div class="absolute z-10 grid place-items-start w-full -top-176 lg:-top-360"><Image src={branchbig} alt="" class="w-[250px] lg:w-[424px]" /></div>
     <div class="grid lg:grid-cols-3 bg-brown-100 mx-20 md:mx-32 py-68 px-20 rounded-lg gap-112 lg:gap-40">
       <article>
         <h2 class="font-display font-bold text-mobile_s md:text-s text-brown-800 pb-40">Hvor meget kaffe passer til mig?</h2>
@@ -102,9 +102,10 @@ import steammilk from "../assets/images/tips/steammilk.webp";
     <div class="absolute z-10 grid place-items-end w-full -bottom-192"><Image src={kopkaffe} alt="" class="" /></div>
   </section>
 
-  <section class="mt-288 mb-40 relative">
-    <div class="absolute z-10 grid self-end md:-top-192"><Image src={branchsmall} alt="" class="-scale-x-100" /></div>
+  <section class="mt-176 md:mt-288 mb-40 relative">
+    <div class="absolute z-10 hidden md:grid self-end md:-top-192"><Image src={branchsmall} alt="" class="-scale-x-100" /></div>
     <div class="relative md:flex items-center overflow-hidden">
+      <div class="md:order-2 whitespace-nowrap"><CarouselIkon ikon={beans_icon} ikon_name="Tips og tricks" /></div>
       <Carousel variant="left">
         <CardTips image={espresso} text="Latte art for begyndere" />
         <CardTips image={hjerte} text="Latte art for begyndere" />
@@ -113,7 +114,6 @@ import steammilk from "../assets/images/tips/steammilk.webp";
         <CardTips image={latte} text="Latte art for begyndere" />
         <CardTips image={steammilk} text="Latte art for begyndere" />
       </Carousel>
-      <CarouselIkon ikon={beans_icon} ikon_name="Tips og tricks" />
 
       <div class="hidden md:block absolute top-1/2 left-40">
         <Image src={pil_l} alt="" class="w-[50px] h-auto" />
