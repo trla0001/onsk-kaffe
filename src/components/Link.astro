@@ -1,20 +1,21 @@
 ---
-// Henter parametrene fra Astro.props
-const { href = "#", target = "_self", variant = "textlink", size = "standard" } = Astro.props;
-
-const linkStyling = "";
+const { variant = "primary", size = "large" } = Astro.props;
 
 const variantClasses = {
-  primary: "",
-  secondary: "",
-  textlink: "",
+  primary: "bg-bordeaux-700 font-bold text-brown-50 border-lg border-bordeaux-700 hover:bg-transparent hover:text-bordeaux-700 hover:border-bordeaux-700",
+  secondary: "text-base font-bold bg-transparent text-bordeaux-700 border-solid border-lg border-bordeaux-700 hover:bg-bordeaux-700 hover:text-brown-50 hover:border-bordeaux-700",
+  menu_links: "",
+  links: "",
 };
 
 const sizeClasses = {
-  large: "",
-  medium: "",
-  small: "",
+  large: "py-24 px-64 text-base",
+  small: "py-12 px-20 text-base_xs",
 };
 ---
 
-<a href={href} class="underline" target={target} class:list={[linkStyling, variantClasses[variant], sizeClasses[size]]}><slot /></a>
+<div>
+  <button class:list={["rounded-lg transition-all duration-300", variantClasses[variant], sizeClasses[size]]}>
+    <slot />
+  </button>
+</div>
