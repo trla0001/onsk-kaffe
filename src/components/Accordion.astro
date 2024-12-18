@@ -1,13 +1,15 @@
 ---
 const { question = "", answer = "" } = Astro.props;
+import { Image } from "astro:assets";
+import arrow from "../assets/images/icons/arrow.svg";
 ---
 
-<details class="group border-b-s border-brown-800 py-xs">
-  <summary class="font-body md:text-base text-mobile_base font-bold flex items-center justify-between cursor-pointer py-4">
+<details class="group border-b-s border-brown-800 py-4">
+  <summary class="font-body md:text-base text-mobile_base text-brown-800 font-bold flex items-center justify-between cursor-pointer py-8">
     {question}
     <span class="transition-transform group-open:rotate-180">
-      <p>▼</p>
+      <p><Image src={arrow} alt="" /></p>
     </span>
   </summary>
-  <article class="font-body text-brown-800 text-mobile_base md:text-base text-p pt-xs">{answer}</article>
+  <article class="font-body text-brown-800 text-mobile_base md:text-base text-p pt-8">{answer}</article>
 </details>
