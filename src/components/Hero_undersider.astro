@@ -5,7 +5,7 @@ import pattern from "../assets/images/om_os/pattern.svg";
 const { illustration, overskrift } = Astro.props;
 ---
 
-<section class="w-full h-[500px] grid grid-cols-3 grid-rows-3 relative">
+<section class="w-full h-[500px] grid grid-cols-3 grid-rows-3 md:grid-rows-2 relative">
   <div class="w-full h-[500px] absolute inset-0 p-20 md:px-32 md:py-64">
     <Image src={pattern} alt="pattern_pic_hero" class="w-full h-full object-cover rounded-lg" />
   </div>
@@ -14,7 +14,7 @@ const { illustration, overskrift } = Astro.props;
     <Image src={illustration} alt="hero_illustration" />
   </div>
 
-  <div class="col-start-1 col-span-3 row-start-2 row-span-1 md:col-start-1 md:col-span-4 md:row-start-2 md:row-span-1 pl-20 z-10 flex items-start md:items-end">
-    <h1 class="text-mobile_xl lg:text-xl font-bold font-display text-brown-800">{overskrift}</h1>
+  <div class="col-start-1 col-span-3 row-start-2 row-span-1 md:col-start-1 md:col-span-4 md:row-start-2 md:row-span-1 pl-32 md:pl-52 md:pb-52 z-10 flex items-start md:items-end">
+    <h1 class="text-mobile_xl lg:text-lplus font-bold font-display text-brown-800">{overskrift}</h1>
   </div>
 </section>
