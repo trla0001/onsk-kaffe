@@ -2,6 +2,9 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import CardAbonnement from "../components/CardAbonnement.astro";
 import Hero_undersider from "../components/Hero_undersider.astro";
+import CardTips from "../components/CardTips.astro";
+import Carousel from "../components/Carousel.astro";
+import CarouselIkon from "../components/CarouselIkon.astro";
 
 import { Image } from "astro:assets";
 import fragt from "../assets/images/icons/fragt.svg";
@@ -12,10 +15,18 @@ import gave from "../assets/images/produkter/gave.webp";
 import branchbig from "../assets/images/branch-big.svg";
 import branchsmall from "../assets/images/branch-small.svg";
 import beans from "../assets/images/beans.png";
+import beans_icon from "../assets/images/icons/beans.svg";
+import pil_l from "../assets/images/om_os/pil_l.svg";
 import samlet from "../assets/images/produkter/samlet.png";
 import kop from "../assets/images/kop.svg";
 import kopkaffe from "../assets/images/kop.png";
 import hero from "../assets/images/abonnement_side/hero.png";
+import espresso from "../assets/images/tips/espresso.webp";
+import hjerte from "../assets/images/tips/hjerte.webp";
+import iskaffe from "../assets/images/tips/iskaffe.webp";
+import julehygge from "../assets/images/tips/julehygge.webp";
+import latte from "../assets/images/tips/latte.webp";
+import steammilk from "../assets/images/tips/steammilk.webp";
 ---
 
 <MainLayout title="Abonnementer" description="En hjemmesider der sælger økologisk kaffe, udstyr og kaffe på abonnement" og:title="ØNSK" og:description="Dette er en hjemmesside lavet af ØNSK, der sælger økologisk kaffe">
@@ -86,6 +97,23 @@ import hero from "../assets/images/abonnement_side/hero.png";
     <div class="absolute z-10 grid place-items-end w-full -bottom-192"><Image src={kopkaffe} alt="" class="" /></div>
   </section>
   <div class="absolute z-10 grid self-end"><Image src={branchsmall} alt="" class="-scale-x-100" /></div>
+  <section>
+    <div class="relative md:flex items-center overflow-hidden pl-20">
+      <Carousel>
+        <CardTips image={espresso} text="Latte art for begyndere" />
+        <CardTips image={hjerte} text="Latte art for begyndere" />
+        <CardTips image={iskaffe} text="Latte art for begyndere" />
+        <CardTips image={julehygge} text="Latte art for begyndere" />
+        <CardTips image={latte} text="Latte art for begyndere" />
+        <CardTips image={steammilk} text="Latte art for begyndere" />
+      </Carousel>
+      <CarouselIkon ikon={beans_icon} ikon_name="Tips og tricks" />
+
+      <div class="hidden md:block absolute top-1/2 right-40">
+        <Image src={pil_l} alt="" class="w-[50px] h-auto" />
+      </div>
+    </div>
+  </section>
 </MainLayout>
 
 <script>
