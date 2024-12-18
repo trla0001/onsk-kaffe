@@ -4,13 +4,14 @@ const { variant = "primary", size = "large" } = Astro.props;
 const variantClasses = {
   primary: "bg-bordeaux-700 font-bold text-brown-50 border-lg border-bordeaux-700 hover:bg-transparent hover:text-bordeaux-700 hover:border-bordeaux-700",
   secondary: "text-base font-bold bg-transparent text-bordeaux-700 border-solid border-lg border-bordeaux-700 hover:bg-bordeaux-700 hover:text-brown-50 hover:border-bordeaux-700",
-  menu_links: "",
-  links: "",
+  menu_links: "text-mobile-xs md:text-xs text-brown-800 hover:underline font-display",
+  links: "text-mobile-xs md:text-xs text-bordeaux-700 hover:underline font-display",
 };
 
 const sizeClasses = {
   large: "py-24 px-64 text-base",
   small: "py-12 px-20 text-base_xs",
+  link_large: "",
 };
 ---
 
