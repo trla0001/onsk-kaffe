@@ -57,7 +57,7 @@ import simon from "../assets/images/trustpilot/simon.webp";
             <h2 class="md:text-m md:text-left text-brown-800 font-display text-center text-s">God smag, lige til din hoveddør - hver måned</h2>
             <!-- Knap bliver udskiftet med komponent -->
             <div class="flex items-center justify-center">
-              <Button variant="primary" size="large">Shop</Button>
+              <Link variant="primary" size="large">Shop</Link>
             </div>
             <!-- ------ -->
           </div>
@@ -83,17 +83,16 @@ import simon from "../assets/images/trustpilot/simon.webp";
           <h2 class="md:text-m text-brown-800 font-display font-semibold text-s">Kaffe på abonnement</h2>
           <h3 class="md:text-xs text-xxs text-brown-800 font-display">Kaffebranchen savner gennemskuelighed</h3>
           <br />
-          <p class="font-body text-brown-800 text-mobile_base md:text-base">
-            Alt for ofte er det umuligt for kaffedrikkere at tyde, hvor deres kaffe kommer fra, hvordan den bliver handlet, og hvilke forhold den er skabt under. <br /><br /> ØNSK står i kontrast til dette, og vi er båret af et brændende ønske om at være
-            præcis det modsatte. Nemlig en gennemskuelig kaffevirksomhed, der handler direkte med vores kaffebønder og investerer tid og penge tilbage i deres produktion.
+          <p class="font-body text-brown-800 text-mobile_base md:text-base pb-68">
+            Alt for ofte er det umuligt for kaffedrikkere at tyde, hvor deres kaffe kommer fra, hvordan den bliver handlet, og hvilke forhold den er skabt under. <br /><br /> ØNSK står i kontrast til dette, og vi er båret af et brændende ønske om at være præcis det modsatte. Nemlig en gennemskuelig kaffevirksomhed, der handler direkte med vores kaffebønder og investerer tid og penge tilbage i deres produktion.
           </p>
-          <Button variant="secondary" size="large">Se vores abennementer</Button>
+          <Link variant="secondary" size="large">Se vores abennementer</Link>
         </div>
       </div>
     </section>
 
     <!-- POPULÆRE PRODUKTER -->
-    <section class="max-w-5xl mx-auto">
+    <!--   <section class="max-w-5xl mx-auto">
       <h2 class="md:text-m text-s text-brown-800 font-display font-semibold">Populære produkter</h2>
 
       <div class="block md:hidden pt-80 justify-items-center overflow-hidden">
@@ -111,10 +110,26 @@ import simon from "../assets/images/trustpilot/simon.webp";
       <div class="justify-items-center py-40">
         <Link variant="links" href="#">Se alle produkter</Link>
       </div>
+    </section> -->
+
+    <section id="abonnementer" class="mt-68 mb-112 mx-20 md:mx-32 grid justify-items-center">
+      <div class="grid grid-cols-3">
+        <h2 class="col-start-1 col-span-3 row-start-1 row-span-1 font-display font-bold text-mobile_m md:text-m text-brown-800">Populære produkter</h2>
+        <div class="col-start-1 col-span-3 row-start-2 row-span-1">
+          <Caruosel>
+            <CardProduct image={kuska} name="Kuska" variant="Mellem ristet" prize="95 kr. - 265 kr." />
+            <CardProduct image={stempelkande} name="Bodum Stempelkande" variant="8 kopper" prize="420 kr." />
+            <CardProduct image={palto} name="El Palto" variant="Mørk ristet" prize="95 kr. - 265 kr." />
+          </Caruosel>
+        </div>
+        <div class="col-start-2 col-span-1 row-start-3 row-span-1 pt-40 text-center">
+          <Link variant="links" href="#">Se alle produkter</Link>
+        </div>
+      </div>
     </section>
 
     <!-- VORES ØNSKE -->
-    <section class="bg-brown-100 py-20">
+    <section class="bg-brown-100 py-68">
       <div class="md:w-288 w-192 flex relative">
         <Image src={vand_kaffe} class="absolute md:top-[-200px] top-[-100px] left-0 z-10" alt="Vand der hælder op i en kaffe" />
       </div>
@@ -122,13 +137,12 @@ import simon from "../assets/images/trustpilot/simon.webp";
         <Image src={ejerne} class="" alt="Rasmus og Andreas tegnet illustration" />
         <div class="px-20">
           <h2 class="md:text-m text-brown-800 font-display font-semibold text-s">Vores ønske</h2>
-          <p class="text-brown-800 font-body text-mobile_base md:text-base">
-            ØNSK blev grundlagt i 2017 af makkerparret Rasmus og Andreas, med et ønske om at skabe en anderledes kaffevirksomhed. Deres vision var at skabe en virksomhed, der ikke kun handlede om kvalitets kaffe, men også om at gøre en positiv
-            forskel. For kaffebønderne, for kunderne og for planeten.
+          <p class="text-brown-800 font-body text-mobile_base md:text-base pb-68">
+            ØNSK blev grundlagt i 2017 af makkerparret Rasmus og Andreas, med et ønske om at skabe en anderledes kaffevirksomhed. Deres vision var at skabe en virksomhed, der ikke kun handlede om kvalitets kaffe, men også om at gøre en positiv forskel. For kaffebønderne, for kunderne og for planeten.
             <br /><br />
             Som et certificeret B Corp har vi officielt erklæret, at vores højeste formål som virksomhed er at bidrage til en bedre verden.
           </p>
-          <Button variant="secondary" size="large">Læs mere om os</Button>
+          <Link variant="secondary" size="large">Læs mere om os</Link>
         </div>
       </div>
     </section>
@@ -146,7 +160,7 @@ import simon from "../assets/images/trustpilot/simon.webp";
         <Kategoricard image={illu_kapsler} name="Kapsler" />
         <Kategoricard image={illu_papkasse} name="Abonnement" />
       </div>
-      <div class="justify-items-center py-40">
+      <div class="justify-items-center pt-40">
         <Link variant="links" href="#">Se alle kategorier</Link>
       </div>
     </section>
@@ -161,16 +175,10 @@ import simon from "../assets/images/trustpilot/simon.webp";
 
     <!-- HVORFOR HANDLE HOS OS? ---- ACCORDION -->
     <section class="m-16 py-192">
-      <h2 class="md:text-m max-w-xl mx-auto text-s text-brown-800 font-display font-semibold">Hvorfor handle hos os?</h2>
+      <h2 class="md:text-m max-w-xl mx-auto text-s text-brown-800 font-display font-semibold pb-20">Hvorfor handle hos os?</h2>
       <div class="max-w-xl mx-auto">
-        <Accordion
-          question="Direkte handel og social ansvarlighed"
-          answer="ØNSK sikrer retfærdige priser for kaffebønder ved at eliminere mellemled og opbygge længerevarende relationer, samtidig med at de bekæmper fattigdom og forbedrer levevilkår for bønderne."
-        />
-        <Accordion
-          question="Bæredygtighed og økologisk produktion"
-          answer="Virksomheden investerer i bæredygtige landbrugspraksisser, dyrker økologisk kaffe gennem skovlandbrug og hjælper med at reducere CO2-udledninger, forbedre jordens sundhed og øge biodiversiteten."
-        />
+        <Accordion question="Direkte handel og social ansvarlighed" answer="ØNSK sikrer retfærdige priser for kaffebønder ved at eliminere mellemled og opbygge længerevarende relationer, samtidig med at de bekæmper fattigdom og forbedrer levevilkår for bønderne." />
+        <Accordion question="Bæredygtighed og økologisk produktion" answer="Virksomheden investerer i bæredygtige landbrugspraksisser, dyrker økologisk kaffe gennem skovlandbrug og hjælper med at reducere CO2-udledninger, forbedre jordens sundhed og øge biodiversiteten." />
         <Accordion question="Gennemsigtighed" answer="ØNSK leverer årlige bæredygtighedsrapporter, der giver et åbent indblik i virksomhedens mål og indsatser for at skabe en mere retfærdig og bæredygtig værdikæde." />
       </div>
     </section>
@@ -179,14 +187,6 @@ import simon from "../assets/images/trustpilot/simon.webp";
     <div class="md:w-288 w-192 flex relative">
       <Image src={kaffe1} class="absolute md:top-[100px] top-[100px] left-0 z-10" alt="En kop kaffe" />
     </div>
-    <!-- <section>
-      <CardTrustpilot image="/trustpilot/image-1.png" navn="Mikkel" text="Hurtig leveringstid samt mulighed for at nyde min kaffe med god samvittighed og vide at jeg støtter en god sag." />
-      <CardTrustpilot image="/trustpilot/image-1.png" navn="Johanne" text="Ubetinget kvalitetsprodukter, som har gjort mig til en begejstret og fast kunde - og produktambassadør." />
-      <CardTrustpilot image="/trustpilot/image-1.png" navn="Rasmus" text="Det rigtige sted at handle for en kvalitetsbevidst kaffedrikker." />
-      <CardTrustpilot image="/trustpilot/image-1.png" navn="Kim" text="ØNSK sørger for at flere penge går til dem, der producerer kaffen. Det er fantastisk. " />
-      <CardTrustpilot image="/trustpilot/image-1.png" navn="Lia" text="Jeg har nu flere gange bestilt kaffe fra Ønsk, som altid er super lækkert og friskt." />
-      <CardTrustpilot image="/trustpilot/image-1.png" navn="Simon" text="Utroligt billige friskristede af høj kvalitet. Abonnementet virker fortrinligt." />
-    </section> -->
     <div class="md:w-288 w-192 flex relative">
       <Image src={kaffe2} class="absolute md:top-[200px] top-[100px] left-[100px] z-0" alt="En anden kop kaffe" />
     </div>
