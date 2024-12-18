@@ -14,6 +14,8 @@ import branchsmall from "../assets/images/branch-small.svg";
 import branchbig from "../assets/images/branch-big.svg";
 import branchsmedium from "../assets/images/branch-medium.svg";
 import ejerne from "../assets/images/ejerne.png";
+import Carousel from "../components/Carousel.astro";
+import CarouselIkon from "../components/CarouselIkon.astro";
 
 import kaffe1 from "../assets/images/kaffe1.png";
 import kaffe2 from "../assets/images/kaffe2.png";
@@ -23,10 +25,19 @@ import illu_bonner from "../assets/images/illu_bonner.png";
 import illu_kande from "../assets/images/illu_kande.png";
 import illu_kapsler from "../assets/images/illu_kapsler.png";
 import illu_papkasse from "../assets/images/illu_papkasse.png";
+import ikon_team from "../assets/images/om_os/ikon_team.svg";
+import pil_r from "../assets/images/om_os/pil_r.svg";
 
 import kuska from "../assets/images/kuska.png";
 import stempelkande from "../assets/images/bodum.png";
 import palto from "../assets/images/palto.png";
+
+import mikkel from "../assets/images/trustpilot/mikkel.webp";
+import johanne from "../assets/images/trustpilot/johanne.webp";
+import rasmus from "../assets/images/trustpilot/rasmus.webp";
+import kim from "../assets/images/trustpilot/kim.webp";
+import lia from "../assets/images/trustpilot/lia.webp";
+import simon from "../assets/images/trustpilot/simon.webp";
 ---
 
 <MainLayout title="Titel">
@@ -46,7 +57,7 @@ import palto from "../assets/images/palto.png";
             <h2 class="md:text-m md:text-left text-brown-800 font-display text-center text-s">God smag, lige til din hoveddør - hver måned</h2>
             <!-- Knap bliver udskiftet med komponent -->
             <div class="flex items-center justify-center">
-              <button class="bg-bordeaux-700 w-192 h-40 text-brown-50 my-40 p-8 rounded-lg">SHOP</button>
+              <Button variant="primary" size="large">Shop</Button>
             </div>
             <!-- ------ -->
           </div>
@@ -73,10 +84,10 @@ import palto from "../assets/images/palto.png";
           <h3 class="md:text-xs text-xxs text-brown-800 font-display">Kaffebranchen savner gennemskuelighed</h3>
           <br />
           <p class="font-body text-brown-800 text-mobile_base md:text-base">
-            Alt for ofte er det umuligt for kaffedrikkere at tyde, hvor deres kaffe kommer fra, hvordan den bliver handlet, og hvilke forhold den er skabt under. <br /><br /> ØNSK står i kontrast til dette, og vi er båret af et brændende ønske om at være præcis det modsatte. Nemlig en gennemskuelig kaffevirksomhed, der handler direkte med vores
-            kaffebønder og investerer tid og penge tilbage i deres produktion.
+            Alt for ofte er det umuligt for kaffedrikkere at tyde, hvor deres kaffe kommer fra, hvordan den bliver handlet, og hvilke forhold den er skabt under. <br /><br /> ØNSK står i kontrast til dette, og vi er båret af et brændende ønske om at være
+            præcis det modsatte. Nemlig en gennemskuelig kaffevirksomhed, der handler direkte med vores kaffebønder og investerer tid og penge tilbage i deres produktion.
           </p>
-          <button class="bg-bordeaux-700 text-brown-50 my-40 p-8 rounded-lg">DET HER ER EN KNAP</button>
+          <Button variant="secondary" size="large">Se vores abennementer</Button>
         </div>
       </div>
     </section>
@@ -97,8 +108,9 @@ import palto from "../assets/images/palto.png";
         <CardProduct image={stempelkande} name="Bodum Stempelkande" variant="8 kopper" prize="420 kr." />
         <CardProduct image={palto} name="El Palto" variant="Mørk ristet" prize="95 kr. - 265 kr." /> -->
       </div>
-
-      <h4 class="text-center py-40">Se alle produkter</h4>
+      <div class="justify-items-center py-40">
+        <Link variant="links" href="#">Se alle produkter</Link>
+      </div>
     </section>
 
     <!-- VORES ØNSKE -->
@@ -111,11 +123,12 @@ import palto from "../assets/images/palto.png";
         <div class="px-20">
           <h2 class="md:text-m text-brown-800 font-display font-semibold text-s">Vores ønske</h2>
           <p class="text-brown-800 font-body text-mobile_base md:text-base">
-            ØNSK blev grundlagt i 2017 af makkerparret Rasmus og Andreas, med et ønske om at skabe en anderledes kaffevirksomhed. Deres vision var at skabe en virksomhed, der ikke kun handlede om kvalitets kaffe, men også om at gøre en positiv forskel. For kaffebønderne, for kunderne og for planeten.
+            ØNSK blev grundlagt i 2017 af makkerparret Rasmus og Andreas, med et ønske om at skabe en anderledes kaffevirksomhed. Deres vision var at skabe en virksomhed, der ikke kun handlede om kvalitets kaffe, men også om at gøre en positiv
+            forskel. For kaffebønderne, for kunderne og for planeten.
             <br /><br />
-             Som et certificeret B Corp har vi officielt erklæret, at vores højeste formål som virksomhed er at bidrage til en bedre verden.
+            Som et certificeret B Corp har vi officielt erklæret, at vores højeste formål som virksomhed er at bidrage til en bedre verden.
           </p>
-          <button class="bg-bordeaux-700 text-brown-50 my-40 p-8 rounded-lg">DET HER ER EN KNAP</button>
+          <Button variant="secondary" size="large">Læs mere om os</Button>
         </div>
       </div>
     </section>
@@ -133,7 +146,9 @@ import palto from "../assets/images/palto.png";
         <Kategoricard image={illu_kapsler} name="Kapsler" />
         <Kategoricard image={illu_papkasse} name="Abonnement" />
       </div>
-      <h4 class="text-center">Se alle produkter</h4>
+      <div class="justify-items-center py-40">
+        <Link variant="links" href="#">Se alle kategorier</Link>
+      </div>
     </section>
 
     <div class="relative">
@@ -148,8 +163,14 @@ import palto from "../assets/images/palto.png";
     <section class="m-16 py-192">
       <h2 class="md:text-m max-w-xl mx-auto text-s text-brown-800 font-display font-semibold">Hvorfor handle hos os?</h2>
       <div class="max-w-xl mx-auto">
-        <Accordion question="Direkte handel og social ansvarlighed" answer="ØNSK sikrer retfærdige priser for kaffebønder ved at eliminere mellemled og opbygge længerevarende relationer, samtidig med at de bekæmper fattigdom og forbedrer levevilkår for bønderne." />
-        <Accordion question="Bæredygtighed og økologisk produktion" answer="Virksomheden investerer i bæredygtige landbrugspraksisser, dyrker økologisk kaffe gennem skovlandbrug og hjælper med at reducere CO2-udledninger, forbedre jordens sundhed og øge biodiversiteten." />
+        <Accordion
+          question="Direkte handel og social ansvarlighed"
+          answer="ØNSK sikrer retfærdige priser for kaffebønder ved at eliminere mellemled og opbygge længerevarende relationer, samtidig med at de bekæmper fattigdom og forbedrer levevilkår for bønderne."
+        />
+        <Accordion
+          question="Bæredygtighed og økologisk produktion"
+          answer="Virksomheden investerer i bæredygtige landbrugspraksisser, dyrker økologisk kaffe gennem skovlandbrug og hjælper med at reducere CO2-udledninger, forbedre jordens sundhed og øge biodiversiteten."
+        />
         <Accordion question="Gennemsigtighed" answer="ØNSK leverer årlige bæredygtighedsrapporter, der giver et åbent indblik i virksomhedens mål og indsatser for at skabe en mere retfærdig og bæredygtig værdikæde." />
       </div>
     </section>
@@ -158,16 +179,32 @@ import palto from "../assets/images/palto.png";
     <div class="md:w-288 w-192 flex relative">
       <Image src={kaffe1} class="absolute md:top-[100px] top-[100px] left-0 z-10" alt="En kop kaffe" />
     </div>
-    <section>
+    <!-- <section>
       <CardTrustpilot image="/trustpilot/image-1.png" navn="Mikkel" text="Hurtig leveringstid samt mulighed for at nyde min kaffe med god samvittighed og vide at jeg støtter en god sag." />
       <CardTrustpilot image="/trustpilot/image-1.png" navn="Johanne" text="Ubetinget kvalitetsprodukter, som har gjort mig til en begejstret og fast kunde - og produktambassadør." />
       <CardTrustpilot image="/trustpilot/image-1.png" navn="Rasmus" text="Det rigtige sted at handle for en kvalitetsbevidst kaffedrikker." />
       <CardTrustpilot image="/trustpilot/image-1.png" navn="Kim" text="ØNSK sørger for at flere penge går til dem, der producerer kaffen. Det er fantastisk. " />
       <CardTrustpilot image="/trustpilot/image-1.png" navn="Lia" text="Jeg har nu flere gange bestilt kaffe fra Ønsk, som altid er super lækkert og friskt." />
       <CardTrustpilot image="/trustpilot/image-1.png" navn="Simon" text="Utroligt billige friskristede af høj kvalitet. Abonnementet virker fortrinligt." />
-    </section>
+    </section> -->
     <div class="md:w-288 w-192 flex relative">
       <Image src={kaffe2} class="absolute md:top-[200px] top-[100px] left-[100px] z-0" alt="En anden kop kaffe" />
+    </div>
+
+    <!-- carousel -->
+    <div class="relative md:flex items-center overflow-hidden pl-20">
+      <CarouselIkon ikon={ikon_team} ikon_name="Vores team" />
+      <Carousel variant="right">
+        <CardTrustpilot image={mikkel} navn="Mikkel" text="Hurtig leveringstid samt mulighed for at nyde min kaffe med god samvittighed og vide at jeg støtter en god sag." />
+        <CardTrustpilot image={johanne} navn="Johanne" text="Ubetinget kvalitetsprodukter, som har gjort mig til en begejstret og fast kunde - og produktambassadør." />
+        <CardTrustpilot image={rasmus} navn="Rasmus" text="Det rigtige sted at handle for en kvalitetsbevidst kaffedrikker." />
+        <CardTrustpilot image={kim} navn="Kim" text="ØNSK sørger for at flere penge går til dem, der producerer kaffen. Det er fantastisk. " />
+        <CardTrustpilot image={lia} navn="Lia" text="Jeg har nu flere gange bestilt kaffe fra Ønsk, som altid er super lækkert og friskt." />
+        <CardTrustpilot image={simon} navn="Simon" text="Utroligt billige friskristede af høj kvalitet. Abonnementet virker fortrinligt." />
+        <div class="hidden md:block absolute top-1/2 right-40 -translate-y-1/2">
+          <Image src={pil_r} alt="" class="w-[50px] h-auto" />
+        </div>
+      </Carousel>
     </div>
   </article>
 </MainLayout>

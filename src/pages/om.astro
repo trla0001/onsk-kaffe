@@ -42,8 +42,8 @@ import noel from "../assets/images/om_os/noel.webp";
     <article class="px-20 md:px-144">
       <div class="md:hidden">
         <div>
-          <h1 class="text-mobile_l font-bold text-brown-800 py-20">Ønsk’s historie</h1>
-          <h2 class="text-mobile-xs font-semibold pb-40">Fra kaffeelskere til en bedre fremtid</h2>
+          <h1 class="text-mobile_l font-bold text-brown-800 py-20 font-display">Ønsk’s historie</h1>
+          <h2 class="text-mobile-xs font-semibold pb-40 font-display">Fra kaffeelskere til en bedre fremtid</h2>
           <p class="text-mobile-base font-regular">
             ØNSK blev grundlagt i 2017 af makkerparret Rasmus og Andreas, med et ønske om at skabe en anderledes kaffevirksomhed. Deres vision var at skabe en virksomhed, der ikke kun handlede om kvalitets kaffe, men også om at gøre en positiv
             forskel. For kaffebønderne, for kunderne og for planeten.
@@ -53,7 +53,7 @@ import noel from "../assets/images/om_os/noel.webp";
           <Image src={historie1} alt="photo af Rasmus og Andreas" class="rounded-lg mr-80 mt-40 w-[90%]" />
           <Image src={bean} alt="photo af a coffee bean" class="rounded-lg absolute w-[40%] z-10 bottom-4 right-4" />
         </div>
-        <div>
+        <div class="pt-32">
           <p class="text-mobile-base font-regular pt-32 pb-64">Som et <span class="font-semibold">certificeret B Corp</span> har vi officielt erklæret, at vores højeste formål som virksomhed er at bidrage til en bedre verden.</p>
         </div>
       </div>
@@ -212,7 +212,7 @@ import noel from "../assets/images/om_os/noel.webp";
     <!-- Carousel -->
     <div class="relative md:flex items-center overflow-hidden pl-20">
       <CarouselIkon ikon={ikon_team} ikon_name="Vores team" />
-      <Carousel>
+      <Carousel variant="right">
         <CardTeam photo={andreas} name="Andreas Kirk" position="Partner & erhvervsløsningerp" phone="+45 25 94 02 10" email="andreas@onsk.dk" />
         <CardTeam photo={mathias} name="Mathias Bunk" position="Partner, administration" phone="+45 25 94 02 10" email="mathias@onsk.dk" />
         <CardTeam photo={laurits} name="Laurits Dates Benthien" position="Kundeservice" phone="+45 25 94 02 10" email="laurits@onsk.dk" />
