@@ -1,0 +1,21 @@
+---
+
+---
+
+<article id="carousel" class="overflow-x-auto snap-x snap-mandatory">
+  <div class="flex items-center min-w-full h-full gap-16 pt-80 pb-40">
+    <slot />
+  </div>
+</article>
+
+<style>
+  /* Skjul scrollbar, men bevar scroll-funktionalitet */
+  #carousel::-webkit-scrollbar {
+    display: none; /* Skjul scrollbar i Webkit-browsere (Chrome, Safari) */
+  }
+
+  #carousel {
+    -ms-overflow-style: none; /* Skjul scrollbar i Internet Explorer 10+ */
+    scrollbar-width: none; /* Skjul scrollbar i Firefox */
+  }
+</style>
