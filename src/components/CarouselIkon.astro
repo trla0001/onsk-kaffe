@@ -3,7 +3,7 @@ const { ikon, ikon_name } = Astro.props;
 import { Image } from "astro:assets";
 ---
 
-<div class="justify-items-center md:mx-144 md:flex-shrink-0">
-  <Image src={ikon} alt="" />
-  <h3 class="text-xs pb-12 md:text-m text-bordeaux-700 font-bold">{ikon_name}</h3>
+<div class="justify-items-center md:mx-40 lg:mx-144 md:flex-shrink-0">
+  <Image src={ikon} alt="" class="w-[80px] lg:w-[174px]" />
+  <h3 class="text-xs pb-12 md:text-m text-bordeaux-700 font-bold font-display">{ikon_name}</h3>
 </div>

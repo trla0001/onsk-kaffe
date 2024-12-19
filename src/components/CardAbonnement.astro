@@ -1,5 +1,5 @@
 ---
-const { name = "", image = "", variant = "", prize = "", badgerabat = "false" } = Astro.props;
+const { name = "", image = "", variant = "", prize = "", badgerabat = "false", alt = "" } = Astro.props;
 
 import { Image } from "astro:assets";
 import Link from "../components/Link.astro";
@@ -7,7 +7,7 @@ import Link from "../components/Link.astro";
 
 <section class="group bg-brown-100 rounded-lg flex flex-col items-center justify-end w-[288px] h-[442px] flex-shrink-0 pb-40 px-40 hover:shadow-drop25 relative">
   <a href="#">
-    <div class="z-10 pb-52"><Image src={image} alt="" class="w-[214px] group-hover:slide-top" /></div>
+    <div class="z-10 pb-52"><Image src={image} alt={alt} class="w-[214px] group-hover:slide-top" /></div>
     <article class="w-full flex flex-col justify-between pb-24 h-[130px]">
       {
         badgerabat == "true" && (
