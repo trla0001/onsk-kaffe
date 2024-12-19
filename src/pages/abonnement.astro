@@ -24,6 +24,8 @@ import beans from "../assets/images/beans.png";
 import samlet from "../assets/images/produkter/samlet.png";
 import kopkaffe from "../assets/images/kop.png";
 import hero from "../assets/images/abonnement_side/hero.png";
+import beans_all_animation from "../assets/images/abonnement_side/beans-big-animation.png";
+import beans_animation from "../assets/images/abonnement_side/beans-animation.png";
 import espresso from "../assets/images/tips/espresso.webp";
 import hjerte from "../assets/images/tips/hjerte.webp";
 import iskaffe from "../assets/images/tips/iskaffe.webp";
@@ -37,6 +39,7 @@ import steammilk from "../assets/images/tips/steammilk.webp";
     <Hero_undersider illustration={hero} overskrift="Abonnementer" />
   </section>
 
+  <!----------------- FIND ABONNEMENT --------------------->
   <section id="abonnementer" class="mt-68 mb-80 md:mb-192 mx-20 md:mx-32 grid justify-items-center">
     <div class="grid grid-cols-3">
       <h2 class="col-start-1 col-span-3 row-start-1 row-span-1 font-display font-bold text-mobile_m md:text-m text-brown-800">Find dit abonnement</h2>
@@ -50,6 +53,7 @@ import steammilk from "../assets/images/tips/steammilk.webp";
     </div>
   </section>
 
+  <!----------------- OM ABONNEMENTER --------------------->
   <section id="om-abonnement" class="relative bg-brown-100 grid justify-items-center items-center py-96 px-20 md:px-32">
     <div class="absolute z-10 grid place-items-end w-full -top-112 lg:-top-176"><Image src={branchbig} alt="" class="-scale-x-100 w-[250px] lg:w-[424px]" /></div>
     <div class="absolute z-10 hidden lg:grid place-items-start w-full"><Image src={branchsmall} alt="" class="-scale-x-100" /></div>
@@ -64,8 +68,12 @@ import steammilk from "../assets/images/tips/steammilk.webp";
     </article>
   </section>
 
+  <!----------------- KVALITET OG SMAG --------------------->
   <section id="kvali" class="grid lg:grid-cols-12 my-192 md:my-68 px-20 md:px-32 relative parallaxgrafik">
-    <div class="absolute z-10 grid place-items-end w-full -top-112 lg:-top-176 parallaxgrafik1"><Image src={beans} alt="" class="-scale-x-100 w-[250px] lg:w-[424px]" /></div>
+    <div class="col-start-9 col-span-4 row-start-1 -mt-176 translate-x-32 relative">
+      <Image src={beans_all_animation} alt="" class="w-[250px] lg:w-[424px]" />
+      <div class="absolute z-20 -mt-176 parallaxgrafik1"><Image src={beans_animation} alt="" class="w-[112px] h-[112px]" /></div>
+    </div>
     <article class="max-w-424 md:max-w-full mx-auto lg:col-start-2 md:col-span-5 lg:col-span-4 md:row-start-1 md:row-span-1 pb-40 md:pb-0">
       <h2 class="font-display font-bold text-mobile_m md:text-m text-brown-800 pb-20 md:pb-40">Kvalitet i Hver Eneste Detalje</h2>
       <p class="font-body font-regular text-mobile_base md:text-base text-brown-800 pb-16">Hver bønne, vi rister, bærer på en historie. En historie om håndværk, passion og dedikation.</p>
@@ -78,6 +86,7 @@ import steammilk from "../assets/images/tips/steammilk.webp";
     </article>
   </section>
 
+  <!----------------- CALCULATOR --------------------->
   <section id="calculator" class="relative">
     <div class="absolute z-10 grid place-items-start w-full -top-176 lg:-top-360"><Image src={branchbig} alt="" class="w-[250px] lg:w-[424px]" /></div>
     <div class="grid lg:grid-cols-3 bg-brown-100 mx-20 md:mx-32 py-68 px-20 rounded-lg gap-112 lg:gap-40">
@@ -104,6 +113,7 @@ import steammilk from "../assets/images/tips/steammilk.webp";
     <div class="absolute z-10 grid place-items-end w-full -bottom-192"><Image src={kopkaffe} alt="" class="" /></div>
   </section>
 
+  <!----------------- TIPS OG TRICKS --------------------->
   <section class="mt-176 md:mt-288 mb-40 relative">
     <div class="absolute z-10 hidden md:grid self-end md:-top-192"><Image src={branchsmall} alt="" class="-scale-x-100" /></div>
     <div class="relative md:flex items-center overflow-hidden">
@@ -128,8 +138,8 @@ import steammilk from "../assets/images/tips/steammilk.webp";
   /* Import af Motion One biblioteket */
   import { animate, stagger, inView, scroll, timeline } from "motion";
   /* Parallaxgrafik */
-  scroll(animate(".parallaxgrafik1", { y: [0, 150, 500, 1000], x: [0, -200, -300, -400, -1500] }), {
+  scroll(animate(".parallaxgrafik1", { y: [0, 150, 300, 600], x: [0, -200, -250, -300, -1000] }), {
     target: document.querySelector(".parallaxgrafik"),
-    offset: ["start end", "end 80%"],
+    offset: ["40vh end", "end 40vh"],
   });
 </script>
