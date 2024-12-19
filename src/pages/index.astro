@@ -45,22 +45,40 @@ import simon from "../assets/images/trustpilot/simon.webp";
 <MainLayout title="ØNSK">
   <article>
     <!-- Hero sektion -->
-    <section class="md:mx-32 bg-brown-100 rounded-lg items-center mx-20 h-[600px]">
+    <section class="md:mx-32 bg-brown-100 rounded-lg items-center mx-20 h-[700px]">
+      <div class="grid md:grid-cols-12 md:grid-rows-6 pt-52 md:pt-4">
+        <div class="md:col-start-6 md:col-span-6 md:row-start-1 md:pt-4 md:row-span-1 place-self-center pb-12 md:pb-0 pt-64">
+          <h1 class="md:text-2xl md:text-left text-brown-800 font-display font-bold text-lplus">ØNSK</h1>
+        </div>
+        <div class="md:col-start-6 md:col-span-4 md:row-start-1 md:pt-424 md:row-span-1 place-self-center pb-68 md:pb-0">
+          <h2 class="md:text-s font-bold md:text-left text-brown-800 font-display text-center text-mobile_l md:pt-68 pl-12">God smag, lige til din hoveddør - hver måned</h2>
+        </div>
+        <div class="md:col-start-10 md:col-span-2 md:row-start-1 md:pt-424 md:row-span-1 place-self-center z-20 md:pl-64">
+          <Link href="#" variant="primary" size="large" target="_self">Shop</Link>
+        </div>
+        <div class="md:col-start-1 md:col-span-full md:row-start-1 md:pt-80 md:row-span-3 -ml-20 md:-ml-32 md:-mb-16">
+          <Image src={handkaffe} class="md:w-[350px] lg:w-[500px] w-[200px] h-auto" alt="Ønsk kaffepose i en hånd over bønner" />
+        </div>
+      </div>
+    </section>
+
+    <!-- old hero section -->
+    <!-- <section class="md:mx-32 bg-brown-100 rounded-lg items-center mx-20 h-[600px]">
       <article class="grid md:grid-cols-12 md:grid-rows-[auto auto auto] pt-88">
-        <div class="md:col-start-6 md:col-span-6 md:row-start-1 md:row-span-1 place-self-center pb-12 md:pb-0"><h1 class="md:text-xl md:text-left text-brown-800 font-display font-bold text-l">ØNSK</h1></div>
+        <div class="md:col-start-6 md:col-span-6 md:row-start-1 md:row-span-1 place-self-center pb-12 md:pb-0"><h1 class="md:text-2xl md:text-left text-brown-800 font-display font-bold text-l">ØNSK</h1></div>
         <div class="md:col-start-6 md:col-span-4 md:row-start-2 md:row-span-1 place-self-center pb-68 md:pb-0">
-          <h2 class="md:text-s md:text-left text-brown-800 font-display text-center text-mobile_s">God smag, lige til din hoveddør - hver måned</h2>
+          <h2 class="md:text-s font-bold md:text-left text-brown-800 font-display text-center text-mobile_s">God smag, lige til din hoveddør - hver måned</h2>
         </div>
         <div class="md:col-start-10 md:col-span-2 md:row-start-2 md:row-span-1 place-self-center z-20">
           <Link href="#" variant="primary" size="large" target="_self">Shop</Link>
         </div>
         <div class="md:col-start-1 md:col-span-full md:row-start-1 md:row-span-3 -ml-20 md:-ml-32 md:-mb-16"><Image src={handkaffe} class="md:w-[350px] lg:w-[500px] w-[245px] h-auto" alt="Ønsk kaffepose i en hånd over bønner" /></div>
       </article>
-    </section>
+    </section> -->
 
     <!-- KAFFE PÅ ABONNEMENT -->
-    <section class="mx-20 md:mx-32 my-112 relative">
-      <div class="absolute z-10 grid place-items-start w-full top-424 lg:top-144 -ml-20 md:-ml-32"><Image src={branchbig} alt="" class="w-[250px] lg:w-[424px]" /></div>
+    <section class="mx-20 md:mx-32 mt-144 relative">
+      <div class="absolute z-10 grid place-items-start w-full top-424 pt-64 md:pt-4 lg:top-144 -ml-20 md:-ml-32"><Image src={branchbig} alt="" class="w-[250px] lg:w-[424px]" /></div>
       <div class="absolute z-10 grid place-items-end w-full -top-144 lg:-top-96 ml-20 md:ml-32"><Image src={branchsmall} alt="" class="w-[200px] lg:w-[250px]" /></div>
       <div class="md:grid grid-cols-12">
         <div></div>
