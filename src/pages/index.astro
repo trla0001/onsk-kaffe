@@ -50,7 +50,7 @@ import simon from "../assets/images/trustpilot/simon.webp";
         <div class="md:col-start-6 md:col-span-6 md:row-start-1 md:row-span-1 place-self-center pb-12 md:pb-0"><h1 class="md:text-xl md:text-left text-brown-800 font-display font-bold text-l">ØNSK</h1></div>
         <div class="md:col-start-6 md:col-span-4 md:row-start-2 md:row-span-1 place-self-center pb-68 md:pb-0"><h2 class="md:text-s md:text-left text-brown-800 font-display text-center text-mobile_s">God smag, lige til din hoveddør - hver måned</h2></div>
         <div class="md:col-start-10 md:col-span-2 md:row-start-2 md:row-span-1 place-self-center">
-          <Link variant="primary" size="large" target="_self">Shop</Link>
+          <Link href="#" variant="primary" size="large" target="_self">Shop</Link>
         </div>
         <div class="md:col-start-1 md:col-span-full md:row-start-1 md:row-span-3 -ml-20 md:-ml-32 md:-mb-16"><Image src={handkaffe} class="md:w-[350px] lg:w-[500px] w-[245px] h-auto" alt="Ønsk kaffepose i en hånd over bønner" /></div>
       </article>
@@ -67,16 +67,20 @@ import simon from "../assets/images/trustpilot/simon.webp";
           <h3 class="md:text-xs text-xxs text-brown-800 font-display">Kaffebranchen savner gennemskuelighed</h3>
           <br />
           <p class="font-body text-brown-800 text-mobile_base md:text-base pb-68">
-            Alt for ofte er det umuligt for kaffedrikkere at tyde, hvor deres kaffe kommer fra, hvordan den bliver handlet, og hvilke forhold den er skabt under. <br /><br /> ØNSK står i kontrast til dette, og vi er båret af et brændende ønske om at være præcis det modsatte. Nemlig en gennemskuelig kaffevirksomhed, der handler direkte med vores kaffebønder og investerer tid og penge tilbage i deres produktion.
+            Alt for ofte er det umuligt for kaffedrikkere at tyde, hvor deres kaffe kommer fra, hvordan den bliver handlet, og hvilke forhold den er skabt under. <br /><br /> ØNSK står i kontrast til dette, og vi er båret af et brændende ønske om at være præcis det modsatte. Nemlig en gennemskuelig kaffevirksomhed, der handler direkte med vores
+            kaffebønder og investerer tid og penge tilbage i deres produktion.
           </p>
-          <Link variant="secondary" size="large">Se vores abennementer</Link>
+          <div class="flex md:justify-start md:items-start justify-center items-center">
+            <Link href="#" variant="secondary" size="large">Se vores abonnementer</Link>
+          </div>
         </div>
       </div>
     </section>
 
+    <!-- Populære Produkter -->
     <section id="abonnementer" class="mt-288 md:mt-68 mb-112 mx-20 md:mx-32 grid justify-items-center">
       <div class="grid grid-cols-3 gap-28">
-        <h2 class="col-start-1 col-span-3 row-start-1 row-span-1 font-display font-bold text-mobile_m md:text-m text-brown-800">Populære produkter</h2>
+        <h2 class="col-start-1 col-span-3 row-start-1 row-span-1 font-display font-bold text-mobile_l md:text-m text-brown-800">Populære produkter</h2>
         <div class="col-start-1 col-span-3 row-start-2 row-span-1">
           <Caruosel>
             <CardProduct image={kuska} name="Kuska" variant="Mellem ristet" prize="95 kr. - 265 kr." />
@@ -84,7 +88,7 @@ import simon from "../assets/images/trustpilot/simon.webp";
             <CardProduct image={palto} name="El Palto" variant="Mørk ristet" prize="95 kr. - 265 kr." />
           </Caruosel>
         </div>
-        <div class="col-start-2 col-span-1 row-start-3 row-span-1 pt-40 text-center whitespace-nowrap">
+        <div class="md:col-start-2 md:col-span-1 md:row-start-3 md:row-span-1 pt-40">
           <Link variant="links" href="#">Se alle produkter</Link>
         </div>
       </div>
@@ -98,11 +102,11 @@ import simon from "../assets/images/trustpilot/simon.webp";
       <div class="max-w-5xl mx-auto grid md:grid-cols-2 items-center">
         <Image src={ejerne} class="" alt="Rasmus og Andreas tegnet illustration" />
         <div class="px-20">
-          <h2 class="md:text-m text-brown-800 font-display font-semibold text-s">Vores ønske</h2>
+          <h2 class="md:text-m text-brown-800 font-display font-semibold text-s pb-8">Vores ønske</h2>
           <p class="text-brown-800 font-body text-mobile_base md:text-base pb-68">
             ØNSK blev grundlagt i 2017 af makkerparret Rasmus og Andreas, med et ønske om at skabe en anderledes kaffevirksomhed. Deres vision var at skabe en virksomhed, der ikke kun handlede om kvalitets kaffe, men også om at gøre en positiv forskel. For kaffebønderne, for kunderne og for planeten.
             <br /><br />
-            Som et certificeret B Corp har vi officielt erklæret, at vores højeste formål som virksomhed er at bidrage til en bedre verden.
+             Som et certificeret B Corp har vi officielt erklæret, at vores højeste formål som virksomhed er at bidrage til en bedre verden.
           </p>
           <Link variant="secondary" size="large">Læs mere om os</Link>
         </div>
@@ -110,12 +114,12 @@ import simon from "../assets/images/trustpilot/simon.webp";
     </section>
 
     <div class="flex justify-end relative">
-      <Image src={branchsmedium} class="absolute md:top-[-100px] top-[-100px] left-0 z-10 w-[200px] md:w-[400px] object-contain" alt="mellem kaffe gren" />
+      <Image src={branchsmedium} class="absolute md:top-[-100px] top-[-40px] left-0 z-10 w-[200px] md:w-[400px] object-contain" alt="mellem kaffe gren" />
     </div>
 
     <!-- KATEGORIER -->
     <section class="max-w-5xl mx-auto px-20 py-80">
-      <h3 class="md:text-m text-s text-brown-800 font-display font-semibold">Kategorier</h3>
+      <h3 class="md:text-m text-s text-brown-800 font-display font-semibold pb-12">Kategorier</h3>
       <div class="grid lg:grid-cols-4 grid-cols-2 grid-row-2 justify-items-center gap-20">
         <Kategoricard image={illu_bonner} name="Bønner" />
         <Kategoricard image={illu_kande} name="Udstyr" />
@@ -162,7 +166,7 @@ import simon from "../assets/images/trustpilot/simon.webp";
           </div>
         </Carousel>
       </div>
-      <Image src={kaffe1} class="absolute md:top-[450px] top-[680px] left-[250px] md:left-[500px] lg:left-[800px] z-0 md:w-288 w-192" alt="En anden kop kaffe" />
+      <Image src={kaffe1} class="absolute md:top-[450px] top-[600px] left-[250px] md:left-[500px] lg:left-[800px] z-0 md:w-288 w-192" alt="En anden kop kaffe" />
     </div>
   </article>
 </MainLayout>
