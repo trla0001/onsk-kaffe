@@ -134,9 +134,7 @@ import steammilk from "../assets/images/tips/steammilk.webp";
 </MainLayout>
 
 <script>
-  /* Import af Motion One biblioteket */
-  import { animate, stagger, inView, scroll, timeline } from "motion";
-  /* Parallaxgrafik */
+  import { animate, scroll } from "motion";
   scroll(animate(".parallaxgrafik1", { y: [0, 150, 400, 700], x: [0, -200, -250, -300, -1000] }), {
     target: document.querySelector(".parallaxgrafik"),
     offset: ["40vh end", "end 40vh"],
