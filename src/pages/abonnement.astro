@@ -40,7 +40,7 @@ import steammilk from "../assets/images/tips/steammilk.webp";
   </section>
 
   <!----------------- FIND ABONNEMENT --------------------->
-  <section id="abonnementer" class="my-96 md:my-192 mx-20 md:mx-32 grid justify-items-center">
+  <section id="abonnementer" class="my-96 md:my-176 mx-20 md:mx-32 grid justify-items-center">
     <div class="grid grid-cols-3">
       <h2 class="col-start-1 col-span-3 row-start-1 row-span-1 font-display font-bold text-mobile_m md:text-m text-brown-800">Find dit abonnement</h2>
       <div class="col-start-1 col-span-3 row-start-2 row-span-1">
@@ -54,7 +54,7 @@ import steammilk from "../assets/images/tips/steammilk.webp";
   </section>
 
   <!----------------- OM ABONNEMENTER --------------------->
-  <section id="om-abonnement" class="mb-96 md:mb-192 px-20 md:px-32 py-52 md:py-108 relative bg-brown-100 grid justify-items-center items-center">
+  <section id="om-abonnement" class="mb-96 md:mb-176 px-20 md:px-32 py-52 md:py-108 relative bg-brown-100 grid justify-items-center items-center">
     <div class="absolute z-10 grid place-items-end w-full -top-112 lg:-top-192"><Image src={branchbig} alt="" class="-scale-x-100 w-[250px] lg:w-[424px]" /></div>
     <div class="absolute z-10 hidden lg:grid place-items-start w-full"><Image src={branchsmall} alt="" class="-scale-x-100" /></div>
     <article class="max-w-[639px] mx-auto pb-80">
@@ -69,8 +69,8 @@ import steammilk from "../assets/images/tips/steammilk.webp";
   </section>
 
   <!----------------- KVALITET OG SMAG --------------------->
-  <section id="kvali" class="mb-96 md:mb-192 px-20 md:px-32 grid lg:grid-cols-12 relative parallaxgrafik">
-    <div class="hidden md:block col-start-9 col-span-4 row-start-1 -mt-176 translate-x-32 relative">
+  <section id="kvali" class="mb-96 md:mb-176 px-20 md:px-32 grid lg:grid-cols-12 relative parallaxgrafik">
+    <div class="hidden md:block col-start-9 col-span-4 row-start-1 -mt-288 translate-x-32 relative">
       <Image src={beans_all_animation} alt="" class="w-[250px] lg:w-[424px]" />
       <div class="absolute z-20 -mt-176 parallaxgrafik1"><Image src={beans_animation} alt="" class="w-[112px] h-[112px]" /></div>
     </div>
@@ -114,7 +114,7 @@ import steammilk from "../assets/images/tips/steammilk.webp";
   </section>
 
   <!----------------- TIPS OG TRICKS --------------------->
-  <section class="my-96 md:my-192 relative">
+  <section class="my-96 md:mb-68 md:mt-176 relative">
     <div class="absolute z-10 hidden md:grid self-end md:-top-[220px]"><Image src={branchsmall} alt="" class="-scale-x-100 md:w-[247px]" /></div>
     <div class="relative md:flex items-center overflow-hidden">
       <div class="md:order-2 whitespace-nowrap"><CarouselIkon ikon={beans_icon} ikon_name="Tips og tricks" /></div>
@@ -138,7 +138,7 @@ import steammilk from "../assets/images/tips/steammilk.webp";
   /* Import af Motion One biblioteket */
   import { animate, stagger, inView, scroll, timeline } from "motion";
   /* Parallaxgrafik */
-  scroll(animate(".parallaxgrafik1", { y: [0, 150, 300, 600], x: [0, -200, -250, -300, -1000] }), {
+  scroll(animate(".parallaxgrafik1", { y: [0, 150, 400, 700], x: [0, -200, -250, -300, -1000] }), {
     target: document.querySelector(".parallaxgrafik"),
     offset: ["40vh end", "end 40vh"],
   });
