@@ -1,11 +1,11 @@
 ---
-const { name = "", image = "", variant = "", prize = "" } = Astro.props;
+const { name = "", image = "", variant = "", prize = "", alt = "" } = Astro.props;
 import { Image } from "astro:assets";
 ---
 
 <section class="group bg-brown-100 rounded-lg flex flex-col items-center justify-end w-[288px] h-[345px] flex-shrink-0 pb-40 px-40 hover:shadow-drop25 relative">
   <a href="#">
-    <div class="z-10 pb-52"><Image src={image} alt="Billede af produkter" class="w-[214px] group-hover:slide-top" /></div>
+    <div class="z-10 pb-52"><Image src={image} alt={alt} class="w-[214px] group-hover:slide-top" /></div>
     <article class="w-full pb-24">
       <h3 class="font-display font-semibold text-mobile_s md:text-xxs text-brown-800 pb-8">{name}</h3>
       <p class="font-body font-regular text-mobile_base md:text-base_xs text-brown-800 pb-0">{variant}</p>
