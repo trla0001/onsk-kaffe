@@ -21,49 +21,53 @@ import firma8 from "../assets/images/firma8.png";
 </div>
 
 <div class="bg-green-700 p-40">
-  <div class="md:text-left text-center text-brown-50 grid md:grid-cols-3 md:grid-rows-2 mx-80">
+  <div class="md:text-left text-center text-brown-50 grid md:grid-cols-3 md:grid-rows-2 mx-80 font-display font-semibold justify-items-center">
     <!-- Adresser -->
-    <div>
-      <h3>Risteri</h3>
-      <h3>Kattegatvej 53 <br /> 2150, Nordhavn</h3>
+    <div class="w-[216px]">
+      <h3 class="pb-8">Risteri</h3>
+      <h3 class="pb-16">Kattegatvej 53 <br /> 2150, Nordhavn</h3>
     </div>
 
-    <div>
-      <h3>Kontor</h3>
-      <h3>Lundtoftegade 23 <br /> 2200, København N</h3>
+    <div class="w-[216px]">
+      <h3 class="pb-8">Kontor</h3>
+      <h3 class="pb-16">Lundtoftegade 23 <br /> 2200, København N</h3>
     </div>
 
-    <div>
-      <h3>Kundeservice</h3>
-      <h3>Tlf: +45 94 09 02 10 <br /> Tilmeld leveranceservice</h3>
+    <div class="w-[216px]">
+      <h3 class="pb-8">Kundeservice</h3>
+      <h3 class="pb-16">Tlf: +45 94 09 02 10 <br /> Tilmeld leveranceservice</h3>
     </div>
 
     <!-- IKONER -->
-    <div class="grid grid-cols-3 gap-20 md:w-[240px]">
-      <div>
-        <Image src={fb} class="h-40 w-40" alt="Facebook ikon" />
-      </div>
-      <div>
-        <Image src={ig} class="h-40 w-40" alt="Instagram ikon" />
-      </div>
-      <div>
-        <Image src={linkedin} class="h-40 w-40" alt="LinkedIn ikon" />
+    <div class="md:row-start-1 py-16">
+      <div class="grid grid-cols-3 gap-20 md:w-[240px]">
+        <div>
+          <Image src={fb} class="h-40 w-40" alt="Facebook ikon" />
+        </div>
+        <div>
+          <Image src={ig} class="h-40 w-40" alt="Instagram ikon" />
+        </div>
+        <div>
+          <Image src={linkedin} class="h-40 w-40" alt="LinkedIn ikon" />
+        </div>
       </div>
     </div>
 
     <!-- NYHEDSBREV -->
-    <form class="w-[250px]">
-      <h3>Tilmeld nyhedsbrev</h3>
-      <div class="mb-5">
-        <input type="text" id="name" class="text-brown-800 bg-brown-50 border text-sm rounded-xs focus:ring-brown-800 focus:border-brown-800 block w-full p-2.5" placeholder="Navn:" required />
-      </div>
-      <div class="mb-5">
-        <input type="email" id="email" class="text-brown-800 bg-brown-50 border text-sm rounded-xs focus:ring-brown-800 focus:border-brown-800 block w-full p-2.5" placeholder="Mail:" required />
-      </div>
-    </form>
+    <div class="md:col-start-1 md:row-start-2 content-end py-16">
+      <form class="w-[216px]">
+        <h3>Tilmeld nyhedsbrev</h3>
+        <div class="mb-5">
+          <input type="text" id="name" class="text-brown-800 bg-brown-50 border text-sm rounded-xs focus:ring-brown-800 focus:border-brown-800 block w-full p-2.5" placeholder="Navn:" required />
+        </div>
+        <div class="mb-5">
+          <input type="email" id="email" class="text-brown-800 bg-brown-50 border text-sm rounded-xs focus:ring-brown-800 focus:border-brown-800 block w-full p-2.5" placeholder="Mail:" required />
+        </div>
+      </form>
+    </div>
 
     <!-- FAQ -->
-    <div class="text-center md:text-left text-brown-50">
+    <div class="text-center md:text-left text-brown-50 py-16">
       <h3>FAQ - Ofte stillede spørgsmål</h3>
       <h3>Job hos ØNSK?</h3>
     </div>
@@ -79,7 +83,7 @@ import firma8 from "../assets/images/firma8.png";
     <Image src={firma8} class="h-68 w-auto mx-auto" alt="Burd delivery" />
   </div>
 
-  <div class="grid grid-cols-4 text-brown-50 text-[10px] justify-items-center">
+  <div class="grid md:grid-cols-4 grid-cols-2 grid-rows-2 text-brown-50 text-[10px] justify-items-center">
     <p>Handelsbetingelser</p>
     <p>Abonnentbetingelser</p>
     <p>Cookie</p>
