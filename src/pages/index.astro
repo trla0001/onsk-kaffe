@@ -18,17 +18,17 @@ import branchsmedium from "../assets/images/branch-medium.svg";
 import ikon_star from "../assets/images/icons/star.svg";
 import pil_r from "../assets/images/om_os/pil_r.svg";
 
-import handkaffe from "../assets/images/handkaffe.png";
-import ejerne from "../assets/images/ejerne.png";
+import handkaffe from "../assets/images/handkaffe.webp";
+import ejerne from "../assets/images/ejerne.webp";
 
-import kaffe1 from "../assets/images/kaffe1.png";
-import kaffe2 from "../assets/images/kaffe2.png";
-import vand_kaffe from "../assets/images/vand_kaffe.png";
+import kaffe1 from "../assets/images/kaffe1.webp";
+import kaffe2 from "../assets/images/kaffe2.webp";
+import vand_kaffe from "../assets/images/vand_kaffe.webp";
 
-import illu_bonner from "../assets/images/illu_bonner.png";
-import illu_kande from "../assets/images/illu_kande.png";
-import illu_kapsler from "../assets/images/illu_kapsler.png";
-import illu_papkasse from "../assets/images/illu_papkasse.png";
+import illu_bonner from "../assets/images/illu_bonner.webp";
+import illu_kande from "../assets/images/illu_kande.webp";
+import illu_kapsler from "../assets/images/illu_kapsler.webp";
+import illu_papkasse from "../assets/images/illu_papkasse.webp";
 
 import kuska from "../assets/images/produkter/kuska.webp";
 import stempelkande from "../assets/images/produkter/stempelkande.webp";
@@ -48,7 +48,9 @@ import simon from "../assets/images/trustpilot/simon.webp";
     <section class="md:mx-32 bg-brown-100 rounded-lg mx-20 h-[600px]">
       <article class="grid md:grid-cols-12 md:grid-rows-[auto auto auto] pt-88">
         <div class="md:col-start-6 md:col-span-6 md:row-start-1 md:row-span-1 place-self-center pb-12 md:pb-0"><h1 class="md:text-xl md:text-left text-brown-800 font-display font-bold text-l">ØNSK</h1></div>
-        <div class="md:col-start-6 md:col-span-4 md:row-start-2 md:row-span-1 place-self-center pb-68 md:pb-0"><h2 class="md:text-s md:text-left text-brown-800 font-display text-center text-mobile_s">God smag, lige til din hoveddør - hver måned</h2></div>
+        <div class="md:col-start-6 md:col-span-4 md:row-start-2 md:row-span-1 place-self-center pb-68 md:pb-0">
+          <h2 class="md:text-s md:text-left text-brown-800 font-display text-center text-mobile_s">God smag, lige til din hoveddør - hver måned</h2>
+        </div>
         <div class="md:col-start-10 md:col-span-2 md:row-start-2 md:row-span-1 place-self-center z-20">
           <Link href="#" variant="primary" size="large" target="_self">Shop</Link>
         </div>
@@ -67,7 +69,8 @@ import simon from "../assets/images/trustpilot/simon.webp";
           <h3 class="md:text-xs text-xxs text-brown-800 font-display">Kaffebranchen savner gennemskuelighed</h3>
           <br />
           <p class="font-body text-brown-800 text-mobile_base md:text-base pb-68">
-            Alt for ofte er det umuligt for kaffedrikkere at tyde, hvor deres kaffe kommer fra, hvordan den bliver handlet, og hvilke forhold den er skabt under. <br /><br /> ØNSK står i kontrast til dette, og vi er båret af et brændende ønske om at være præcis det modsatte. Nemlig en gennemskuelig kaffevirksomhed, der handler direkte med vores kaffebønder og investerer tid og penge tilbage i deres produktion.
+            Alt for ofte er det umuligt for kaffedrikkere at tyde, hvor deres kaffe kommer fra, hvordan den bliver handlet, og hvilke forhold den er skabt under. <br /><br /> ØNSK står i kontrast til dette, og vi er båret af et brændende ønske om at være
+            præcis det modsatte. Nemlig en gennemskuelig kaffevirksomhed, der handler direkte med vores kaffebønder og investerer tid og penge tilbage i deres produktion.
           </p>
           <div class="flex md:justify-start md:items-start justify-center items-center relative z-40">
             <Link href="#" variant="secondary" size="large">Se vores abonnementer</Link>
@@ -103,7 +106,8 @@ import simon from "../assets/images/trustpilot/simon.webp";
         <div class="px-20">
           <h2 class="md:text-m text-brown-800 font-display font-semibold text-s pb-8">Vores ønske</h2>
           <p class="text-brown-800 font-body text-mobile_base md:text-base pb-68">
-            ØNSK blev grundlagt i 2017 af makkerparret Rasmus og Andreas, med et ønske om at skabe en anderledes kaffevirksomhed. Deres vision var at skabe en virksomhed, der ikke kun handlede om kvalitets kaffe, men også om at gøre en positiv forskel. For kaffebønderne, for kunderne og for planeten.
+            ØNSK blev grundlagt i 2017 af makkerparret Rasmus og Andreas, med et ønske om at skabe en anderledes kaffevirksomhed. Deres vision var at skabe en virksomhed, der ikke kun handlede om kvalitets kaffe, men også om at gøre en positiv
+            forskel. For kaffebønderne, for kunderne og for planeten.
             <br /><br />
             Som et certificeret B Corp har vi officielt erklæret, at vores højeste formål som virksomhed er at bidrage til en bedre verden.
           </p>
@@ -142,8 +146,14 @@ import simon from "../assets/images/trustpilot/simon.webp";
     <section class="m-16 py-68 md:py-192">
       <h2 class="md:text-m max-w-xl mx-auto text-s text-brown-800 font-display font-semibold pb-20">Hvorfor handle hos os?</h2>
       <div class="max-w-xl mx-auto">
-        <Accordion question="Direkte handel og social ansvarlighed" answer="ØNSK sikrer retfærdige priser for kaffebønder ved at eliminere mellemled og opbygge længerevarende relationer, samtidig med at de bekæmper fattigdom og forbedrer levevilkår for bønderne." />
-        <Accordion question="Bæredygtighed og økologisk produktion" answer="Virksomheden investerer i bæredygtige landbrugspraksisser, dyrker økologisk kaffe gennem skovlandbrug og hjælper med at reducere CO2-udledninger, forbedre jordens sundhed og øge biodiversiteten." />
+        <Accordion
+          question="Direkte handel og social ansvarlighed"
+          answer="ØNSK sikrer retfærdige priser for kaffebønder ved at eliminere mellemled og opbygge længerevarende relationer, samtidig med at de bekæmper fattigdom og forbedrer levevilkår for bønderne."
+        />
+        <Accordion
+          question="Bæredygtighed og økologisk produktion"
+          answer="Virksomheden investerer i bæredygtige landbrugspraksisser, dyrker økologisk kaffe gennem skovlandbrug og hjælper med at reducere CO2-udledninger, forbedre jordens sundhed og øge biodiversiteten."
+        />
         <Accordion question="Gennemsigtighed" answer="ØNSK leverer årlige bæredygtighedsrapporter, der giver et åbent indblik i virksomhedens mål og indsatser for at skabe en mere retfærdig og bæredygtig værdikæde." />
       </div>
     </section>
